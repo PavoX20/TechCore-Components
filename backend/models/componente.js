@@ -10,4 +10,6 @@ var componenteSchema=Schema({
     imagen:String
 });
 
+
+
 module.exports=mongoose.model('Componente',componenteSchema);

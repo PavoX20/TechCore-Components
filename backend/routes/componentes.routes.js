@@ -10,4 +10,11 @@ var multipartyMiddleWare=multiparty({uploadDir:'./uploads'});
 router.get('/inicio',componentesRouter.getInicio);
 
 
+//componentes Tarjeta grafica
+router.post('/tarjetaGrafica',componentesRouter.saveComponente);
+router.post('/categoria',componentesRouter.saveCategoria)
+// router.get('/tarjetaGrafica:id',componentesRouter.detalleComponente);
+// router.get('/procesador-detalles',componentesRouter.detallesProcesador);
+
+
 module.exports=router;

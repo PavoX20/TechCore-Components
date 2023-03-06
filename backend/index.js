@@ -4,7 +4,7 @@ var port='3700';
 mongoose.promise=global.Promise;
 mongoose.set("strictQuery",false);
 var app=require('./app');
-mongoose.connect('mongodb://127.0.0.1:27017/componentes')
+mongoose.connect('mongodb+srv://dbUser:techcorecomponents@cluster1.7xtlw1w.mongodb.net/TechCoreComponents?retryWrites=true&w=majority')
 .then(()=>{
     console.log("Conexion establecida con la BDD")
     app.listen(port,()=>{
