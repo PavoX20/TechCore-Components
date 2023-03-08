@@ -1,6 +1,8 @@
 'use strict'
+
 var fs=require('fs');
 var path=require('path');
+var fse = require('fs-extra');
 var {Categoria, CategoriaModel} = require('../models/categoria');
 const techComponent = require('../models/techComponent');
 var mongoose = require('mongoose');
@@ -24,11 +26,12 @@ var controller={
         componente.imagen1=null;
 
         componente.categoria = params.idCategoria;
-        await componente.save((err,componenteGuardadar)=>{
-            if (err) return res.status(500).send({message:"Error al guardar"});
-            if(!componenteGuardadar) return res.status(404).send({message:'No se ha guardado el componente'});
-            return res.status(200).send({componente:componenteGuardadar});
-        })
+        try {
+            const componenteGuardado = await componente.save();
+            return res.status(200).send({ componente: componenteGuardado });
+          } catch (err) {
+            return res.status(500).send({ message: "Error al guardar" });
+        }
         
 
         
@@ -41,116 +44,188 @@ var controller={
 
         categoria.nombre = params.nombreCategoria;
 
-        await categoria.save((err,cateGuardadar)=>{
-            if (err) return res.status(500).send({message:"Error al guardar"});
-            if(!cateGuardadar) return res.status(404).send({message:'No se ha guardado la componente'});
-            return res.status(200).send({categoria:cateGuardadar});
-        })
+        try {
+            const cateGuardada = await categoria.save();
+            return res.status(200).send({ categoria: cateGuardada });
+          } catch (error) {
+            return res.status(500).send({ message: "Error al guardar" });
+        }
     },
 
-    getComponentes:function(req,res){
-        techComponent.find({}).sort().exec((err,techComponents)=>{
-            if (err) return res.status(500).send({message:"Error al recuparar los datos"});
-            if(!techComponents) return res.status(404).send({message:'No existen Componentes'});
-            return res.status(200).send({techComponents});
-        })
+    getComponentes: async function(req,res){
+        try {
+            const techComponents =  await techComponent.find().sort();
+            if (!techComponents || techComponents.length === 0) {
+              return res.status(404).send({ message: 'No existen Componentes' });
+            }
+            return res.status(200).send({ techComponents });
+          } catch (err) {
+            return res.status(500).send({ message: 'Error al recuperar los datos' });
+          }
     },
 
 
-    getByCategoria:function(req,res){
+    getByCategoria: async function(req,res){
         var idCategoria;
 
         try {
-            idCategoria = mongoose.Types.ObjectId(req.params.idCategoria);
+            idCategoria = new mongoose.Types.ObjectId(req.params.idCategoria);
+            console.log(idCategoria);
         } catch (err) {
             console.log(err);
             res.status(500).send('El ID de categoría no es válido');
             return;
         }
-        techComponent.find({categoria: idCategoria}, 
-        function(err, techComponent){
-            if(err){
-                console.log(err);
-                return res.status(500).send(err);
+        try {
+            const idCategoria = new mongoose.Types.ObjectId(req.params.idCategoria);
+            const techComponents = await techComponent.find({ categoria: idCategoria }).exec();
+            if (!techComponents || techComponent.length === 0) {
+              return res.status(404).send({ message: 'No existen Componentes' });
             }
-            return res.json({techComponent});
-        });
+            return res.status(200).send({ techComponents });
+          } catch (err) {
+            console.log(err);
+            return res.status(500).send({ message: 'Error al recuperar los datos' });
+          }          
+          
+          
+          
     },
 
-    getComponente:function(req,res){
-        var componenteId=req.params.id;
-        if(componenteId==null) return res.status(404).send({message:"El componente no existe"});
-
-        techComponent.findById(componenteId,(err,techComponents)=>{
-            if (err) return res.status(500).send({message:"Error al recuperar los datos"});
-            if(!techComponents) return res.status(404).send({message:'El componente no existe'});
-            return res.status(200).send({techComponents});
-        })
-    },
-
-    deleteComponent:function(req,res){
-        var componenteId=req.params.id;
-
-        techComponent.findByIdAndRemove(componenteId,(err,techComponents)=>{
-            if (err) return res.status(500).send({message:"Error al eliminar los datos"});
-            if(!techComponents) return res.status(404).send({message:'No se puede eliminar el componente'});
-            return res.status(200).send({techComponents});
-        })
-    },
-
-    updateComponent:function(req,res){
-        var componenteId=req.params.id;
-        var update=req.body;
-
-        techComponent.findByIdAndUpdate(componenteId,update,{new:true},(err,techComponentsActualizado)=>{
-            if (err) return res.status(500).send({message:"Error al eliminar los datos"});
-            if(!techComponentsActualizado) return res.status(404).send({message:'No se puede eliminar el componente'});
-            return res.status(200).send({techComponentsActualizado});
-        })
-    },
-    uploadImages:function(req,res){
-
-        var componenteId=req.params.id;
-        var newFolderPath = './uploads/'+componenteId;
-        if (!fs.existsSync(newFolderPath)) {
-            fs.mkdirSync(newFolderPath);
+    getComponente: async function(req, res) {
+        const componenteId = req.params.id;
+        if (!componenteId) {
+          return res.status(404).send({ message: 'El componente no existe' });
         }
+      
+        try {
+          const techComponents = await techComponent.findById(componenteId);
+          if (!techComponents) {
+            return res.status(404).send({ message: 'El componente no existe' });
+          }
+          return res.status(200).send({ techComponents });
+        } catch (err) {
+          return res.status(500).send({ message: 'Error al recuperar los datos' });
+        }
+    },   
+      
+    deleteComponent:async function(req,res){
+        const componenteId = req.params.id;
+        if (!componenteId) {
+          return res.status(404).send({ message: 'El componente no existe' });
+        }
+      
+        try {
+          const techComponents = await techComponent.findByIdAndDelete(componenteId);
+          if (!techComponents) {
+            return res.status(404).send({ message: 'El componente no existe' });
+          }
+          return res.status(200).send({ techComponents });
+        } catch (err) {
+          return res.status(500).send({ message: 'Error al recuperar los datos' });
+        }
+    },
+
+    updateComponent:async function(req,res){
+
+        var update=req.body;
+        const componenteId = req.params.id;
+        if (!componenteId) {
+          return res.status(404).send({ message: 'El componente no existe' });
+        }
+      
+        try {
+          const techComponents = await techComponent.findByIdAndDelete(componenteId);
+          if (!techComponents) {
+            return res.status(404).send({ message: 'El componente no existe' });
+          }
+          return res.status(200).send({ techComponents });
+        } catch (err) {
+          return res.status(500).send({ message: 'Error al recuperar los datos' });
+        }
+    },
+    // uploadImages:function(req,res){
+
+    //     var componenteId=req.params.id;
+    //     var newFolderPath = './uploads/'+componenteId;
+    //     if (!fs.existsSync(newFolderPath)) {
+    //         fs.mkdirSync(newFolderPath);
+    //     }
         
-        var files=req.files.imagenes;
-        var fileNames=[];
+    //     var files=req.files.imagenes;
+    //     var fileNames=[];
         
-        if(files){
-            for(var i=0;i<files.length;i++){
-                var filePath=files[i].path;
-                var fileName=files[i].originalFilename;
-                var extSplit=fileName.split('\.');
-                var fileExt=extSplit[1];
-                if(fileExt=='png'||fileExt=='jpg'||fileExt=='jpeg'||fileExt=='gif'){
-                    //Mueve el archivo a una carpeta en el servidor
-                    var newFilePath='./uploads/'+componenteId+'/'+fileName;
-                    fs.rename(filePath,newFilePath,(err)=>{
-                        if(err){
-                            console.log(err);
-                            return res.status(500).send({message:"La imagen no se ha subido"});
-                        }else{
-                            fileNames.push(fileName);
-                            if(i==files.length-1){
-                                techComponent.findByIdAndUpdate(componenteId,{imagenes:fileNames},{new:true},(err,techComponentsActualizado)=>{
-                                    if (err) return res.status(500).send({message:"La imagen no se ha subido"});
-                                    if(!techComponentsActualizado) return res.status(404).send({message:'El componente no existe y no se subio la imagen'});
-                                    return res.status(200).send({techComp:techComponentsActualizado});
-                                });
-                            }
-                        }
+    //     if(files){
+    //         for(var i=0;i<files.length;i++){
+    //             var filePath=files[i].path;
+    //             var fileName=files[i].originalFilename;
+    //             var extSplit=fileName.split('\.');
+    //             var fileExt=extSplit[1];
+    //             if(fileExt=='png'||fileExt=='jpg'||fileExt=='jpeg'||fileExt=='gif'){
+    //                 //Mueve el archivo a una carpeta en el servidor
+    //                 var newFilePath='./uploads/'+componenteId+'/'+fileName;
+    //                 fs.rename(filePath,newFilePath,(err)=>{
+    //                     if(err){
+    //                         console.log(err);
+    //                         return res.status(500).send({message:"La imagen no se ha subido"});
+    //                     }else{
+    //                         fileNames.push(fileName);
+    //                         if(i==files.length-1){
+    //                             techComponent.findByIdAndUpdate(componenteId,{imagenes:fileNames},{new:true},(err,techComponentsActualizado)=>{
+    //                                 if (err) return res.status(500).send({message:"La imagen no se ha subido"});
+    //                                 if(!techComponentsActualizado) return res.status(404).send({message:'El componente no existe y no se subio la imagen'});
+    //                                 return res.status(200).send({techComp:techComponentsActualizado});
+    //                             });
+    //                         }
+    //                     }
+    //                 });
+    //             }else{
+    //                 fs.unlink(filePath,(err)=>{
+    //                     return res.status(200).send({message:"La extension no es valida"});
+    //                 });
+    //             }
+    //         }
+    //     }else{
+    //         return res.status(200).send({message:"No se han subido archivos"});
+    //     }
+    // },
+    uploadImages: function (req, res) {
+        var componenteId = req.params.id;
+        var files = req.files.imagenes;
+        var fileNames = [];
+    
+        if (files) {
+          for (var i = 0; i < files.length; i++) {
+            var filePath = files[i].path;
+            var fileName = files[i].originalFilename;
+            var extSplit = fileName.split('.');
+            var fileExt = extSplit[1];
+            if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
+              // Mueve el archivo a una carpeta en el servidor
+              var newFilePath = './uploads/' + componenteId + '/' + fileName;
+              fse.copy(filePath, newFilePath, function (err) {
+                if (err) {
+                  console.log(err);
+                  return res.status(500).send({ message: "La imagen no se ha subido" });
+                } else {
+                  fileNames.push(fileName);
+                  if (i == files.length - 1) {
+                    techComponent.findByIdAndUpdate(componenteId, { imagenes: fileNames }, { new: true }, function (err, techComponentsActualizado) {
+                      if (err) return res.status(500).send({ message: "La imagen no se ha subido" });
+                      if (!techComponentsActualizado) return res.status(404).send({ message: 'El componente no existe y no se subio la imagen' });
+                      return res.status(200).send({ techComp: techComponentsActualizado });
                     });
-                }else{
-                    fs.unlink(filePath,(err)=>{
-                        return res.status(200).send({message:"La extension no es valida"});
-                    });
+                  }
                 }
+              });
+            } else {
+              fse.unlink(filePath, function (err) {
+                return res.status(200).send({ message: "La extension no es valida" });
+              });
             }
-        }else{
-            return res.status(200).send({message:"No se han subido archivos"});
+          }
+        } else {
+          return res.status(200).send({ message: "No se han subido archivos" });
         }
     },
 

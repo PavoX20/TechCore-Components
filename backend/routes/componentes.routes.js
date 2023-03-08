@@ -25,8 +25,16 @@ router.get('/componentes/:idCategoria',componentesRouter.getByCategoria);
 //Obtener solo un componente, segun su id
 router.get('/componente/:id',componentesRouter.getComponente);
 
+//Eliminar componente
+router.get('/delete/:id',componentesRouter.getComponente);
+
+//Eliminar componente
+router.get('/editar/:id',componentesRouter.updateComponent);
+
 //Guardar imagen
 router.post('/guardar-imagenes/:id',multipartyMiddleWare,componentesRouter.uploadImages);
+
+
 
 //recuperar una imagen
 router.get('/get-imagen/:imagen',componentesRouter.getImage);
