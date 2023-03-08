@@ -126,22 +126,18 @@ var controller={
         }
     },
 
-    updateComponent:async function(req,res){
-
-        var update=req.body;
-        const componenteId = req.params.id;
-        if (!componenteId) {
-          return res.status(404).send({ message: 'El componente no existe' });
-        }
+    updateComponent: async function (req, res) {
+        var update = req.body;
+        var componenteId = req.params.id;
       
         try {
-          const techComponents = await techComponent.findByIdAndDelete(componenteId);
-          if (!techComponents) {
-            return res.status(404).send({ message: 'El componente no existe' });
+          const techComponentsActualizado = await techComponent.findByIdAndUpdate(componenteId, update, { new: true });
+          if (!techComponentsActualizado) {
+            return res.status(404).send({ message: 'No se puede actualizar el componente' });
           }
-          return res.status(200).send({ techComponents });
+          return res.status(200).send({ techComponentsActualizado });
         } catch (err) {
-          return res.status(500).send({ message: 'Error al recuperar los datos' });
+          return res.status(500).send({ message: 'Error al actualizar los datos' });
         }
     },
     // uploadImages:function(req,res){
@@ -189,43 +185,83 @@ var controller={
     //         return res.status(200).send({message:"No se han subido archivos"});
     //     }
     // },
-    uploadImages: function (req, res) {
-        var componenteId = req.params.id;
-        var files = req.files.imagenes;
+    // uploadImages: function (req, res) {
+    //     var componenteId = req.params.id;
+    //     var files = req.files.imagenes;
+    //     var fileNames = [];
+    
+    //     if (files) {
+    //         for (var i = 0; i < files.length; i++) {
+    //             var filePath = files[i].path;
+    //             var fileName = files[i].originalFilename;
+    //             var extSplit = fileName.split('.');
+    //             var fileExt = extSplit[1];
+    //             if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
+    //                 // Mueve el archivo a una carpeta en el servidor
+    //                 var newFilePath = './uploads/' + componenteId + '/' + fileName;
+    //                 fse.copy(filePath, newFilePath, function (err) {
+    //                     if (err) {
+    //                         console.log(err);
+    //                         return res.status(500).send({ message: "La imagen no se ha subido" });
+    //                     } else {
+    //                         fileNames.push(fileName);
+    //                         if (i == files.length - 1) {
+    //                             techComponent.findByIdAndUpdate(componenteId, { imagenes: fileNames }, { new: true }, function (err, techComponentsActualizado) {
+    //                                 if (err) return res.status(500).send({ message: "La imagen no se ha subido" });
+    //                                 if (!techComponentsActualizado) return res.status(404).send({ message: 'El componente no existe y no se subió la imagen' });
+    //                                 return res.status(200).send({ techComponent: techComponentsActualizado });
+    //                             });
+    //                         }
+    //                     }
+    //                 });
+    //             } else {
+    //                 fse.unlink(filePath, function (err) {
+    //                     return res.status(200).send({ message: "La extensión no es válida" });
+    //                 });
+    //             }
+    //         }
+    //     } else {
+    //         return res.status(200).send({ message: "No se han subido archivos" });
+    //     }
+    // },
+    uploadImages: function(req, res) {
+        var componenteID = req.params.id;
         var fileNames = [];
     
-        if (files) {
-          for (var i = 0; i < files.length; i++) {
-            var filePath = files[i].path;
-            var fileName = files[i].originalFilename;
-            var extSplit = fileName.split('.');
-            var fileExt = extSplit[1];
-            if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
-              // Mueve el archivo a una carpeta en el servidor
-              var newFilePath = './uploads/' + componenteId + '/' + fileName;
-              fse.copy(filePath, newFilePath, function (err) {
-                if (err) {
-                  console.log(err);
-                  return res.status(500).send({ message: "La imagen no se ha subido" });
-                } else {
-                  fileNames.push(fileName);
-                  if (i == files.length - 1) {
-                    techComponent.findByIdAndUpdate(componenteId, { imagenes: fileNames }, { new: true }, function (err, techComponentsActualizado) {
-                      if (err) return res.status(500).send({ message: "La imagen no se ha subido" });
-                      if (!techComponentsActualizado) return res.status(404).send({ message: 'El componente no existe y no se subio la imagen' });
-                      return res.status(200).send({ techComp: techComponentsActualizado });
-                    });
-                  }
-                }
-              });
-            } else {
-              fse.unlink(filePath, function (err) {
-                return res.status(200).send({ message: "La extension no es valida" });
-              });
+        if (req.files) {
+            var files = req.files.imagenes;
+            if (!Array.isArray(files)) {
+                files = [files];
             }
-          }
+    
+            files.forEach(function(file) {
+                var filePath = file.path;
+                var fileSplit = filePath.split('\\');
+                var fileName = fileSplit[1];
+                var extSplit = fileName.split('\.');
+                var fileExt = extSplit[1];
+                if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
+                    fileNames.push(fileName);
+                } else {
+                    fs.unlink(filePath, function(err) {
+                        // Manejar el error aquí
+                    });
+                }
+            });
+    
+            techComponent.findByIdAndUpdate(componenteID, { imagenes: fileNames }, { new: true })
+                .then(function(techComponentActualizada) {
+                    if (!techComponentActualizada) {
+                        return res.status(404).send({ message: 'El componente no existe y no se subieron las imágenes' });
+                    }
+                    return res.status(200).send({ tech: techComponentActualizada });
+                })
+                .catch(function(err) {
+                    return res.status(500).send({ message: "Las imágenes no se han subido" });
+                });
+    
         } else {
-          return res.status(200).send({ message: "No se han subido archivos" });
+            return res.status(200).send({ message: "No se subió ninguna imagen" });
         }
     },
 
@@ -239,11 +275,23 @@ var controller={
                 res.status(200).send({message:"No existe la imagen"})
             }
         })
+    },
+    getAllImages : function(req, res) {
+        var componenteID = req.params.id; 
+        // Buscar el componente en la base de datos
+        techComponent.findById(componenteID)
+          .then((componenteEncontrado) => {
+            if (!componenteEncontrado) {
+              return res.status(404).send({ message: "El componente no existe" });
+            }
+            // Si el componente existe, enviar las imágenes al cliente
+            return res.status(200).send({ imagenes: componenteEncontrado.imagenes });
+          })
+          .catch((error) => {
+            console.log(error);
+            return res.status(500).send({ message: "Error al buscar el componente" });
+          });
     }
-
-
-
-
 
 }
 

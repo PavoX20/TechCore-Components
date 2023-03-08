@@ -34,11 +34,11 @@ router.get('/editar/:id',componentesRouter.updateComponent);
 //Guardar imagen
 router.post('/guardar-imagenes/:id',multipartyMiddleWare,componentesRouter.uploadImages);
 
-
-
 //recuperar una imagen
 router.get('/get-imagen/:imagen',componentesRouter.getImage);
 
+//recuperar imagenes del componente segun el idComponent
+router.get('/get-imagenes/:id',componentesRouter.getAllImages);
 
 
 
