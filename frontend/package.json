@@ -1,0 +1,15 @@
+{
+  "name": "techcorecomponents",
+  "version": "1.0.0",
+  "description": "Venta de componentes electronicos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "PC",
+    "Components"
+  ],
+  "author": "Grupo de Web",
+  "license": "MIT"
+}
