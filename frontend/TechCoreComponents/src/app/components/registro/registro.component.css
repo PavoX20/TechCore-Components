@@ -1,0 +1,241 @@
+:host,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+:host,
+:not(span, a, ul, ol, li, p) {
+  display: flex;
+}
+
+ul,
+ol {
+  text-indent: 0;
+  padding-inline-start: 1.5em;
+}
+
+p:empty::before {
+  content: '';
+  display: inline-block;
+}
+
+img {
+  object-fit: contain;
+}
+
+svg {
+  overflow: visible;
+}
+
+:host {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow: hidden;
+}
+.header4 {
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 1920px;
+  height: 102px;
+  align-items: flex-start;
+}
+.bG {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #111;
+  box-shadow: 0px 1px 0px 0px #e5e9f2;
+}
+.abstractLogoCGIYellowGraphicDe {
+  
+  
+  top: center;
+  width: 1920px;
+  height: 846px;
+  background-image: url('/assets/registro/abstractLogoCGIYellowGraphicDe.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bG2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 86.6667%;
+  bottom: 0;
+  background-color: #111;
+  box-shadow: 0px 1px 0px 0px #e5e9f2;
+}
+.rectangle611 {
+  opacity: 0.7;
+  position: absolute;
+  left: 752px;
+  top: 291px;
+  width: 412px;
+  height: 499px;
+  border-radius: 20px;
+  background-color: #482948;
+  filter: blur(2px);
+}
+.registro {
+  color: #fff;
+  font-size: 58px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat Alternates, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 828px;
+  top: 302px;
+  width: 261px;
+  height: 94px;
+  flex-direction: column;
+}
+.rectangle614 {
+  position: absolute;
+  left: 828px;
+  top: 487px;
+  width: 261px;
+  height: 46px;
+  overflow: visible;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rectangle613 {
+  position: absolute;
+  left: 828px;
+  top: 407px;
+  width: 261px;
+  height: 46px;
+  border-radius: 10px;
+  background-color: #482948;
+}
+.rectangle612 {
+  position: absolute;
+  left: 828px;
+  top: 566px;
+  width: 261px;
+  height: 46px;
+  border-radius: 10px;
+  background-color: #482948;
+}
+.usuario {
+  color: #fff;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat Alternates, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 828px;
+  top: 541px;
+  width: 116px;
+  height: 27px;
+  flex-direction: column;
+}
+.nombre {
+  color: #fff;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat Alternates, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 828px;
+  top: 373px;
+  width: 116px;
+  height: 27px;
+  flex-direction: column;
+}
+.apellido {
+  color: #fff;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat Alternates, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 828px;
+  top: 460px;
+  width: 116px;
+  height: 27px;
+  flex-direction: column;
+}
+.iniciarSesion {
+  color: #fff;
+  font-size: 13px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat Alternates, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  position: absolute;
+  left: 909px;
+  top: 758px;
+  width: 99px;
+  height: 27px;
+  flex-direction: column;
+}
+.rectangle6132 {
+  position: absolute;
+  left: 828px;
+  top: 648px;
+  width: 261px;
+  height: 46px;
+  border-radius: 10px;
+  background-color: #482948;
+}
+.contrasena {
+  color: #fff;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat Alternates, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 828px;
+  top: 625px;
+  width: 155px;
+  height: 27px;
+  flex-direction: column;
+}
+.rectangle6142 {
+  position: absolute;
+  left: 886px;
+  top: 713px;
+  width: 145px;
+  height: 34px;
+  border-radius: 10px;
+  background-color: #0e1b3b;
+}
+.login {
+  color: #fff;
+  font-size: 13px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Commissioner, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 938px;
+  top: 721px;
+  width: 41px;
+  height: 18px;
+  flex-direction: column;
+}
