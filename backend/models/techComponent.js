@@ -8,7 +8,7 @@ var componenteSchema = Schema({
     titulo: String,
     detalle: String,
     precio: Number,
-    imagen: String,
+    imagenes: [String],
     categoria: {type: mongoose.Schema.Types.ObjectId, ref: 'categorias'}
 });
 
