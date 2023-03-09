@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { techComponent } from "../models/techComponent"; 
 import { Global } from "./global";
 import { Observable } from 'rxjs';
 
@@ -13,10 +12,14 @@ export class ComponenteService{
         this.url=Global.url;
     }
     //ver todas las peliculas
-    //http://localhost:3700/peliculas
-    getComponente(id:String):Observable<any>{
+    //http://localhost:3700/componentes/:idCategoria
+    getComponenteId(id:String):Observable<any>{
         let headers=new HttpHeaders().set('Content-Type','application/json');
-        return this._http.get(this.url+'componente/'+id,{headers:headers});
+        return this._http.get(this.url+'componentes/:'+id,{headers:headers});
     }
-
+    //http://localhost:3700/componentes
+    getComponentes():Observable<any>{
+        let headers=new HttpHeaders().set('Content-Type','application/json');
+        return this._http.get(this.url+'componentes',{headers:headers});
+    }
 }

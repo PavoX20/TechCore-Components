@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem; text-align: center;">
+    <img *ngIf="item.imagen != 'N/A'" src="{{url+'get-imagen/'+item.imagen}}" class="card-img-top" alt="{{item.nombre}}">
+    <div class="card-body">
+        <h3 class="card-title">{{item.nombre}}</h3>
+        <p class="card-text">Precio: {{item.precio}}</p>
+        <button class="btn btn-primary">Ver Detalles</button>
+    </div>
+</div>
