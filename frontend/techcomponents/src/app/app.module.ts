@@ -14,7 +14,7 @@ import { TarjetaComponent } from './components/tienda/tarjeta/tarjeta.component'
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponenteService } from './services/componente.service';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,11 +26,12 @@ import { ComponenteService } from './services/componente.service';
     EssentialIconsSendComponent,
     OfertaComponent,
     TiendaComponent,
-    TarjetaComponent
+    TarjetaComponent,
   ],
   imports: [BrowserModule,
     AppRoutingModule,
-    HttpClientModule],
+    HttpClientModule,
+    NgxPaginationModule],
   providers: [ComponenteService],
   bootstrap: [AppComponent],
 })

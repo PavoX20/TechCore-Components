@@ -52,11 +52,12 @@
     <div class="col mt-2 sinProducto clearfix" *ngIf="size===0 && statusError===false">
       NO EXISTE NINGUN PRODUCTO DE ESTA CATEGORIA
     </div>
-      <div class="col mt-2" *ngFor="let producto of techComponent">
+      <div class="col mt-2" *ngFor="let producto of techComponent | paginate: {itemsPerPage: 3, currentPage: page}">
         <div *ngIf="size!=0 && statusError===false">
           <app-tarjeta [item]="producto"></app-tarjeta>
         </div>
-    </div>
+      </div>
+    <pagination-controls class="mt-4 text-center" (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
   </div>
 </div>
 

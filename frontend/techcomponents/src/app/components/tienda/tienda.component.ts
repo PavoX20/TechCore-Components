@@ -17,6 +17,8 @@ export class TiendaComponent implements OnInit {
   public error:String;
   public statusError:Boolean
   public size:number
+  public page!:number
+  
   constructor(
     private _componenteService:ComponenteService,
     private _route: ActivatedRoute,

@@ -7,7 +7,6 @@
     display: inline-block;
   }
   
-  /* Dropdown Content (Hidden by Default) */
   .dropdown-menu {
     display: none;
     position: absolute;
@@ -17,7 +16,6 @@
     z-index: 1;
   }
   
-  /* Links inside the dropdown */
   .dropdown-menu a {
     color: black;
     padding: 12px 16px;
