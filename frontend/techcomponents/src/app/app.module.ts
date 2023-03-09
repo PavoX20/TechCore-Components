@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { FormsModule } from '@angular/forms';
+import { DetalleComponenteComponent } from './components/detalle-componente/detalle-componente.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
+    DetalleComponenteComponent,
     InicioComponent
   ],
   imports: [
@@ -18,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-2 order-md-1">
+            <!-- espacio vacio -->
+        </div>
+        <div class="col-12 col-md-4 order-md-2">
+            <!--  central izquierda (imagenes) -->
+            <div class="image-container">
+                <div class="main-image">
+                    <a href="" (click)="setImagen(componente.imagenes[0], $event)" class="imge"><img src="{{url+'get-imagen/'+componente.imagenes[0]}}" *ngIf="componente.imagenes[0]"></a>
+                    <a href="" (click)="setImagen(componente.imagenes[0+1], $event)" class="imge"><img src="{{url+'get-imagen/'+componente.imagenes[0+1]}}" *ngIf="componente.imagenes[0+1]"></a>
+                    <a href="" (click)="setImagen(componente.imagenes[0+2], $event)" class="imge"><img src="{{url+'get-imagen/'+componente.imagenes[0+2]}}" *ngIf="componente.imagenes[0+2]"></a>
+                    <a href="" (click)="setImagen(componente.imagenes[0+3], $event)" class="imge"><img src="{{url+'get-imagen/'+componente.imagenes[0+3]}}" *ngIf="componente.imagenes[0+3]"></a>
+                </div>
+                
+                <div class="secondary-images">
+                    <a   class="imges"><img src="{{url+'get-imagen/'+imagenID}}" *ngIf="componente.imagenes[0]"></a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-12 col-md-4 order-md-3">
+            <!--  central derecha (especificaciones, titulo y botones)-->
+            <h2>{{this.componente.titulo}}</h2>
+            <ul class="list-unstyled">
+                <p>{{this.componente.detalle}}</p>
+            </ul>
+            <ul class="list-unstyled">
+                <p>{{this.componente.precio}}</p>
+            </ul>
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <button class="btn btn-primary btn-block">Comprar</button>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <button class="btn btn-success btn-block">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-2 order-md-4">
+            <!-- espacio vacio -->
+            
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const imagenes = document.querySelectorAll('.imge img');
+    imagenes.forEach(function(img) {
+      img.addEventListener('click', function() {
+        // Elimina la clase 'selected' de todas las imágenes
+        imagenes.forEach(function(img) {
+          img.classList.remove('selected');
+        });
+        // Agrega la clase 'selected' a la imagen seleccionada
+        this.classList.add('selected');
+      });
+    });
+</script>
