@@ -4,20 +4,17 @@
             <img src="../assets/kisspng-technology-circle-vector-technology-wind-semicircle-5a8a55a1549f73.5654551715190153293466.png" height="40" alt="TECH COMPONENTS" [routerLink]="['/home']">
             TECHCORE-COMPONENTS
         </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" [routerLink]="['/home']">Home</a>
+                <a class="nav-item nav-link" [routerLink]="['/home']" style="margin-right: 50px;">Home</a>
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown button
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTienda" data-bs-toggle="dropdown" aria-expanded="false" style="background: transparent; margin-right: 50px;" [routerLink]="['/componentes']">
+                      Tienda
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuTienda">
+                      <li><a class="dropdown-item" [routerLink]="['/componentes', '6407e3bd706724b394fbe3b1']">Componente 1</a></li>
+                      <li><a class="dropdown-item" [routerLink]="['/componentes', '640982645693476b531502ac']">Componente 2</a></li>
+                      <li><a class="dropdown-item" href="#">Componente 3</a></li>
                     </ul>
                   </div>
                 <a class="nav-item nav-link" [routerLink]="['/registro']">Registro</a>
