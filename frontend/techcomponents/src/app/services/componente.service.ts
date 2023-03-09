@@ -15,7 +15,7 @@ export class ComponenteService{
     //http://localhost:3700/componentes/:idCategoria
     getComponente(id:String):Observable<any>{
         let headers=new HttpHeaders().set('Content-Type','application/json');
-        return this._http.get(this.url+'componentes/:'+id,{headers:headers});
+        return this._http.get(this.url+'componentes/'+id,{headers:headers});
     }
     //http://localhost:3700/componentes
     getComponentes():Observable<any>{

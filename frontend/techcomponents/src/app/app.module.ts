@@ -14,6 +14,7 @@ import { TarjetaComponent } from './components/tienda/tarjeta/tarjeta.component'
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponenteService } from './services/componente.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { ComponenteService } from './services/componente.service';
     EssentialIconsSendComponent,
     OfertaComponent,
     TiendaComponent,
-    TarjetaComponent,
+    TarjetaComponent
   ],
   imports: [BrowserModule,
     AppRoutingModule,

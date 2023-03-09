@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import type { OnInit } from '@angular/core';
-
 @Component({
   selector: 'ng-root',
   templateUrl: './app.component.html',

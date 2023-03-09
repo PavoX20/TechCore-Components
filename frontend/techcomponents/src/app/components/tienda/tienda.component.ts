@@ -24,7 +24,7 @@ export class TiendaComponent implements OnInit {
   }
 
   getComponentes(){
-    this._componenteService.getComponentes().subscribe(
+    this._componenteService.getComponente('640982645693476b531502ac').subscribe(
       response=>{
         if(response.techComponents){
           this.techComponent = response.techComponents

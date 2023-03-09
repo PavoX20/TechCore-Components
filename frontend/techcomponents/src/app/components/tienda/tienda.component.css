@@ -28,6 +28,8 @@
   width: min-content;
   height: min-content;
   flex-direction: column;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 23px;
 }
@@ -57,6 +59,8 @@
   width: min-content;
   height: min-content;
   flex-direction: column;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 23px;
 }
@@ -89,6 +93,8 @@
   width: min-content;
   height: min-content;
   flex-direction: column;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 23px;
 }
@@ -121,6 +127,8 @@
   width: min-content;
   height: min-content;
   flex-direction: column;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 23px;
 }
