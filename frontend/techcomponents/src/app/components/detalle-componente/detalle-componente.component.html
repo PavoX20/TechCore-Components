@@ -21,19 +21,19 @@
         </div>
         <div class="col-12 col-md-4 order-md-3">
             <!--  central derecha (especificaciones, titulo y botones)-->
-            <h2>{{this.componente.titulo}}</h2>
+            <h2 class="titulo-componente">{{this.componente.titulo}}</h2>
             <ul class="list-unstyled">
                 <p>{{this.componente.detalle}}</p>
             </ul>
-            <ul class="list-unstyled">
-                <p>{{this.componente.precio}}</p>
+            <ul class="list-unstyled" style="text-align: center; margin-top: 10px; font-weight: bold; font-size: 30px;">
+                <p>${{this.componente.precio}}</p>
             </ul>
-            <div class="row">
+            <div class="row" style="text-align: center; margin-top: 50px;">
                 <div class="col-md-6 mb-2">
-                    <button class="btn btn-primary btn-block">Comprar</button>
+                    <button class="btn btn-primary btn-block custom-btn">AÑADIR <br> AL CARRITO</button>
                 </div>
                 <div class="col-md-6 mb-2">
-                    <button class="btn btn-success btn-block">Añadir al carrito</button>
+                    <button class="btn btn-success btn-block custom-btn">COMPRAR <br> AHORA</button>
                 </div>
             </div>
         </div>
@@ -41,7 +41,21 @@
             <!-- espacio vacio -->
             
         </div>
+
+        
     </div>
+
+    <br>
+    
+
+    <div class="categoria container">
+        <div class="row">
+          <div class="col mt-2" *ngFor="let producto of techComponent | slice:0:3">
+            <app-tarjeta [item]="producto"></app-tarjeta>
+          </div>
+        </div>
+    </div>
+    
 </div>
 
 

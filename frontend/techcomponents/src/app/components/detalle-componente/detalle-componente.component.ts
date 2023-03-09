@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ComponenteService } from 'src/app/services/componente.service';
 import { Global } from '../../services/global';
 import { ActivatedRoute, Router} from '@angular/router';
 import { techComponent } from 'src/app/models/techComponent';
+import { TarjetaComponent } from '../tienda/tarjeta/tarjeta.component';
 
 
 @Component({
@@ -13,8 +14,8 @@ import { techComponent } from 'src/app/models/techComponent';
 })
 export class DetalleComponenteComponent implements OnInit{
 
-
-  
+  @ViewChild(TarjetaComponent) appTarjeta: TarjetaComponent;
+  public techComponent:techComponent[];
   public url:string;
   public componente:techComponent;
   public confirm:boolean;
@@ -33,26 +34,43 @@ export class DetalleComponenteComponent implements OnInit{
     this.imagenID="";
     this.imagenSeleccionada="";
     this.imagenes = document.querySelectorAll<HTMLAnchorElement>('.imge');
+    this.techComponent=[];
+    this.appTarjeta = new TarjetaComponent;
   }
   ngOnInit(): void {
     this._route.params.subscribe(params=>{
       //let id=params['id'];
       //console.log(id);
-      let id = "6407eee5ae428b26cc5a1c56";
+      let id = "640982e4e5cadb965fbe5e5b";
+      this.getComponentes();
       this.getPelicula(id);
-
       
     })
   }
 
   getPelicula(id:String){
-    this._componenteService.getComponente(id).subscribe(
+    this._componenteService.getComponenteId(id).subscribe(
       response=>{
         this.componente=response.techComponents;
         this.setImagen(this.componente.imagenes[0])
       },
       error=>{
         console.log(<any>error);
+      }
+    )
+  }
+
+  getComponentes(){
+    console.log("asgdjklsdfjkl");
+    this._componenteService.getComponentes().subscribe(
+      response=>{
+        if(response.techComponents){
+          this.techComponent = response.techComponents;
+          console.log(this.techComponent);
+        }
+      },
+      error=>{
+        console.log(<any>error)
       }
     )
   }

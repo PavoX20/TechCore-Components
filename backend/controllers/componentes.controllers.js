@@ -77,16 +77,16 @@ var controller={
             return;
         }
         try {
-            const idCategoria = new mongoose.Types.ObjectId(req.params.idCategoria);
-            const techComponents = await techComponent.find({ categoria: idCategoria }).exec();
-            if (!techComponents || techComponent.length === 0) {
-              return res.status(404).send({ message: 'No existen Componentes' });
-            }
-            return res.status(200).send({ techComponents });
-          } catch (err) {
-            console.log(err);
-            return res.status(500).send({ message: 'Error al recuperar los datos' });
-          }          
+          const idCategoria = new mongoose.Types.ObjectId(req.params.idCategoria);
+          const techComponents = await techComponent.find({ categoria: idCategoria }).exec();
+          if (!techComponents || techComponent.length === 0) {
+            return res.status(404).send({ message: 'No existen Componentes' });
+          }
+          return res.status(200).send({ techComponents });
+        } catch (err) {
+          console.log(err);
+          return res.status(500).send({ message: 'Error al recuperar los datos' });
+        }        
           
           
           

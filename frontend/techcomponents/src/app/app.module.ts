@@ -14,6 +14,7 @@ import { TarjetaComponent } from './components/tienda/tarjeta/tarjeta.component'
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponenteService } from './services/componente.service';
+import { DetalleComponenteComponent } from './components/detalle-componente/detalle-componente.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ComponenteService } from './services/componente.service';
     OfertaComponent,
     TiendaComponent,
     TarjetaComponent,
+    DetalleComponenteComponent
   ],
   imports: [BrowserModule,
     AppRoutingModule,
