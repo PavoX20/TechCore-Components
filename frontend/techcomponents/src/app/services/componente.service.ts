@@ -13,7 +13,7 @@ export class ComponenteService{
     }
     //ver todas las peliculas
     //http://localhost:3700/componentes/:idCategoria
-    getComponenteId(id:String):Observable<any>{
+    getComponente(id:String):Observable<any>{
         let headers=new HttpHeaders().set('Content-Type','application/json');
         return this._http.get(this.url+'componentes/:'+id,{headers:headers});
     }

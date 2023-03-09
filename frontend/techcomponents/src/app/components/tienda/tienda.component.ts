@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import type { OnInit } from '@angular/core';
-import { Componente } from 'src/app/models/componente';
+import { techComponent } from 'src/app/models/techComponent';
 import { ComponenteService } from 'src/app/services/componente.service';
 import { Global } from 'src/app/services/global';
 
@@ -11,13 +11,13 @@ import { Global } from 'src/app/services/global';
   styleUrls: ['./tienda.component.css'],
 })
 export class TiendaComponent implements OnInit {
-  public componentes:Componente[];
+  public techComponent:techComponent[];
   public url:string;
   constructor(
     private _componenteService:ComponenteService
   ) {
     this.url=Global.url;
-    this.componentes=[];
+    this.techComponent=[];
    }
   ngOnInit(): void {
     this.getComponentes()
@@ -27,8 +27,8 @@ export class TiendaComponent implements OnInit {
     this._componenteService.getComponentes().subscribe(
       response=>{
         if(response.techComponents){
-          this.componentes = response.techComponents
-          console.log(this.componentes)
+          this.techComponent = response.techComponents
+          console.log(this.techComponent)
         }
       },
       error=>{

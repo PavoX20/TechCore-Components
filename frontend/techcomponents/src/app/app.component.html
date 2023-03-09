@@ -1,1 +1,22 @@
-<ng-tienda></ng-tienda>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <h3 class="navbar-brand">TECH COMPONENTS</h3>
+    <div class="collapse navbar-collapse nav-tech" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home']">Inicio<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/tienda']">Tienda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/registro']">Registro</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/login']">Login</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+<section id="content">
+    <router-outlet></router-outlet>
+</section>
