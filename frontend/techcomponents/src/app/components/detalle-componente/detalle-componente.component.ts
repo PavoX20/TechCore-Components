@@ -41,7 +41,7 @@ export class DetalleComponenteComponent implements OnInit{
     this._route.params.subscribe(params=>{
       //let id=params['id'];
       //console.log(id);
-      let id = "640982e4e5cadb965fbe5e5b";
+      let id = "640a14571f8f2814f4b58b3c";
       this.getComponentes();
       this.getPelicula(id);
       
