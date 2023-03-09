@@ -8,13 +8,15 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { FormsModule } from '@angular/forms';
 import { DetalleComponenteComponent } from './components/detalle-componente/detalle-componente.component';
 
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
     DetalleComponenteComponent,
-    InicioComponent
+    InicioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
