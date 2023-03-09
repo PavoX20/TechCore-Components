@@ -46,14 +46,22 @@
 
 <div class="categoria container">
   <div class="row">
-    <div class="col mt-2" *ngFor="let producto of techComponent">
-      <app-tarjeta [item]="producto"></app-tarjeta>
+    <div class="col mt-2 error clearfix" *ngIf="statusError===true">
+      {{error}} D:
+    </div>
+    <div class="col mt-2 sinProducto clearfix" *ngIf="size===0 && statusError===false">
+      NO EXISTE NINGUN PRODUCTO DE ESTA CATEGORIA
+    </div>
+      <div class="col mt-2" *ngFor="let producto of techComponent">
+        <div *ngIf="size!=0 && statusError===false">
+          <app-tarjeta [item]="producto"></app-tarjeta>
+        </div>
     </div>
   </div>
 </div>
 
 
-<div class="container-fluid footerBig5">
+<div class="container-fluid mt-2 footerBig5">
   <div class="row">
     <div class=" col">
       <div class="landify">TECHCOMPONENTS</div>

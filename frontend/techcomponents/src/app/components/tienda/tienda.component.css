@@ -409,6 +409,27 @@
   align-items: flex-start;
   overflow: hidden;
 }
+
+.error{
+  width: 500px;
+  height: 100px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  background-color: darkred;
+  text-align: center;
+  font-size: 57px;
+  color: #ffffff;
+}
+.sinProducto{
+  width: 500px;
+  height: 100px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  background-color: #9ca0ac;
+  text-align: center;
+  font-size: 48px;
+  color: #06010c;
+}
 /* .icons8AgregarACarritoDeCompras {
   position: absolute;
   left: 1810px;

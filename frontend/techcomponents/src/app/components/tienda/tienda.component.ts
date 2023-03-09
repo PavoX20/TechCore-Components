@@ -14,6 +14,9 @@ import { Global } from 'src/app/services/global';
 export class TiendaComponent implements OnInit {
   public techComponent:techComponent[];
   public url:string;
+  public error:String;
+  public statusError:Boolean
+  public size:number
   constructor(
     private _componenteService:ComponenteService,
     private _route: ActivatedRoute,
@@ -21,6 +24,9 @@ export class TiendaComponent implements OnInit {
   ) {
     this.url=Global.url;
     this.techComponent=[];
+    this.error="";
+    this.statusError=false;
+    this.size=0;
    }
   ngOnInit(): void {
     if(this.router.url === '/componentes'){
@@ -39,12 +45,15 @@ export class TiendaComponent implements OnInit {
     this._componenteService.getComponente(id).subscribe(
       response=>{
         if(response.techComponents){
+          this.statusError = false
           this.techComponent = response.techComponents
+          this.size = this.techComponent.length
           console.log(this.techComponent)
         }
       },
       error=>{
-        console.log(<any>error)
+        this.statusError = true
+        this.error = error.error
       }
     )
   }
@@ -53,12 +62,15 @@ export class TiendaComponent implements OnInit {
     this._componenteService.getComponentes().subscribe(
       response=>{
         if(response.techComponents){
+          this.statusError = false
           this.techComponent = response.techComponents
+          this.size = this.techComponent.length
           console.log(this.techComponent)
         }
       },
       error=>{
-        console.log(<any>error)
+        this.statusError = true
+        this.error = error.error
       }
     )
   }
