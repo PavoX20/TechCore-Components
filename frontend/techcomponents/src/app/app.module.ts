@@ -15,7 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponenteService } from './services/componente.service';
 import { DetalleComponenteComponent } from './components/detalle-componente/detalle-componente.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,8 @@ import { DetalleComponenteComponent } from './components/detalle-componente/deta
   ],
   imports: [BrowserModule,
     AppRoutingModule,
-    HttpClientModule],
+    HttpClientModule,
+    NgxPaginationModule],
   providers: [ComponenteService],
   bootstrap: [AppComponent],
 })

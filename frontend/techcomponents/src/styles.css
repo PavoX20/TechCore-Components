@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Fira Sans";
+    src: url('/assets/fonts/fira/eot/FiraSans-Regular.eot');
+    src: url('/assets/fonts/fira/eot/FiraSans-Regular.eot') format('embedded-opentype'),
+         url('/assets/fonts/fira/woff2/FiraSans-Regular.woff2') format('woff2'),
+         url('/assets/fonts/fira/woff/FiraSans-Regular.woff') format('woff'),
+         url('/assets/fonts/fira/woff2/FiraSans-Regular.ttf') format('truetype');
+}
+
+*{
+    font-family: "Fira Sans", "PT Sans", Calibri, Tahoma, sans-serif !important;
+}

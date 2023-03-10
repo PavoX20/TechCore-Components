@@ -24,7 +24,7 @@
       <div class="frame2"><div class="mSI">MSI</div></div>
       <div class="verCatalogo">Ver catálogo</div>
     </div>
-    <div class="col mt-2 frame13">
+    <div class="col mt-4 frame13">
       <div class="eVGA_logo_black1"></div>
       <div class="frame3"><div class="eVGA">EVGA</div></div>
       <div class="verCatalogo2">Ver catálogo</div>
@@ -46,14 +46,23 @@
 
 <div class="categoria container">
   <div class="row">
-    <div class="col mt-2" *ngFor="let producto of techComponent">
-      <app-tarjeta [item]="producto"></app-tarjeta>
+    <div class="col mt-2 error clearfix" *ngIf="statusError===true">
+      {{error}} D:
     </div>
+    <div class="col mt-2 sinProducto clearfix" *ngIf="size===0 && statusError===false">
+      NO EXISTE NINGUN PRODUCTO DE ESTA CATEGORIA
+    </div>
+      <div class="col mt-2" *ngFor="let producto of techComponent | paginate: {itemsPerPage: 3, currentPage: page}">
+        <div *ngIf="size!=0 && statusError===false">
+          <app-tarjeta [item]="producto"></app-tarjeta>
+        </div>
+      </div>
+    <pagination-controls class="mt-4 text-center" (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
   </div>
 </div>
 
 
-<div class="container-fluid footerBig5">
+<div class="container-fluid mt-2 footerBig5">
   <div class="row">
     <div class=" col">
       <div class="landify">TECHCOMPONENTS</div>
@@ -64,10 +73,10 @@
       <div class="allRightsReserved">All rights reserved</div>
     </div>
     <div class="col">
-      <ng-social-icons-style-white-socia></ng-social-icons-style-white-socia>
-      <ng-social-icons-style-white-socia2></ng-social-icons-style-white-socia2>
-      <ng-social-icons-style-white-socia3></ng-social-icons-style-white-socia3>
-      <ng-social-icons-style-white-socia4></ng-social-icons-style-white-socia4>
+      <img src="/assets/path-icon.svg">
+      <img src="/assets/path-icon2.svg">
+      <img src="/assets/path-icon3.svg">
+      <img src="/assets/path-icon4.svg">
     </div>
   </div>
   <div class="row">
