@@ -43,12 +43,12 @@ export class DetalleComponenteComponent implements OnInit{
       //console.log(id);
       let id = "640a14571f8f2814f4b58b3c";
       this.getComponentes();
-      this.getPelicula(id);
+      this.getComponent(id);
       
     })
   }
 
-  getPelicula(id:String){
+  getComponent(id:String){
     this._componenteService.getComponenteId(id).subscribe(
       response=>{
         this.componente=response.techComponents;

@@ -15,6 +15,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponenteService } from './services/componente.service';
 import { DetalleComponenteComponent } from './components/detalle-componente/detalle-componente.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
+import { CookieService } from 'ngx-cookie-service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,12 +31,16 @@ import { DetalleComponenteComponent } from './components/detalle-componente/deta
     OfertaComponent,
     TiendaComponent,
     TarjetaComponent,
-    DetalleComponenteComponent
+    DetalleComponenteComponent,
+    CarritoComponent
   ],
-  imports: [BrowserModule,
+  imports: [
+    BrowserModule,
     AppRoutingModule,
-    HttpClientModule],
-  providers: [ComponenteService],
+    HttpClientModule,
+    FormsModule
+  ],
+  providers: [ComponenteService, CookieService, CarritoComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -19,7 +19,9 @@
                     <img src="../assets/icons8Usuario5011.png" alt="..." height="36">
                 </a>
                 <a class="nav-item nav-link" href="#">
-                    <img src="../assets/icons8AgregarACarritoDeCompras.png" alt="..." height="36">
+                    {{this.cantidad}}
+                    <a [routerLink]="['/carrito']"><img src="../assets/icons8AgregarACarritoDeCompras.png" alt="..." height="36" ></a>
+                    
                 </a>
             </div>
         </div>
