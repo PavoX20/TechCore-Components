@@ -9,7 +9,8 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 
 const routes: Routes = [
   {path:'home',component:InicioComponent},
-  {path:'tienda',component:TiendaComponent},
+  {path:'componentes/:idCategoria',component:TiendaComponent},
+  {path:'componentes',component:TiendaComponent},
   {path:'registro',component:RegistroComponent},
   {path:'login',component:LoginComponent},
   {path:'detalle-componente',component:DetalleComponenteComponent},
@@ -18,7 +19,7 @@ const routes: Routes = [
   
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

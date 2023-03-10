@@ -18,7 +18,7 @@ import { DetalleComponenteComponent } from './components/detalle-componente/deta
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { CookieService } from 'ngx-cookie-service';
 import { FormsModule } from '@angular/forms';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +38,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxPaginationModule,
     FormsModule
   ],
   providers: [ComponenteService, CookieService, CarritoComponent],
