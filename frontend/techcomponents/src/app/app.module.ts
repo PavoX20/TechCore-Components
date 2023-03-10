@@ -19,6 +19,7 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 import { CookieService } from 'ngx-cookie-service';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { InicioComponent } from './components/inicio/inicio.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     TiendaComponent,
     TarjetaComponent,
     DetalleComponenteComponent,
-    CarritoComponent
+    CarritoComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
