@@ -13,8 +13,9 @@ const routes: Routes = [
   {path:'componentes',component:TiendaComponent},
   {path:'registro',component:RegistroComponent},
   {path:'login',component:LoginComponent},
-  {path:'detalle-componente',component:DetalleComponenteComponent},
+  {path:'detalle-componente/:id',component:DetalleComponenteComponent},
   {path:'carrito',component:CarritoComponent},
+  //{path:'carrito/:id',component:CarritoComponent}
 ];
   
 

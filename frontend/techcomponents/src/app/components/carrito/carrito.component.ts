@@ -53,7 +53,6 @@ export class CarritoComponent implements OnInit {
         this.agregarAlCarrito(this.componente);
         this.cantidadEnCarrito = this.getCantidadEnCarrito();
         console.log(this.cantidadEnCarrito);
-        
       },
       error=>{
         console.log(<any>error);

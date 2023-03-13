@@ -39,9 +39,8 @@ export class DetalleComponenteComponent implements OnInit{
   }
   ngOnInit(): void {
     this._route.params.subscribe(params=>{
-      //let id=params['id'];
-      //console.log(id);
-      let id = "640a14571f8f2814f4b58b3c";
+      let id=params['id'];
+      console.log(id);
       this.getComponentes();
       this.getComponent(id);
       
