@@ -30,7 +30,7 @@
             </ul>
             <div class="row" style="text-align: center; margin-top: 50px;">
                 <div class="col-md-6 mb-2">
-                    <a [routerLink]="['/carrito',componente._id]"><button class="btn btn-primary btn-block custom-btn">AÑADIR <br> AL CARRITO</button></a>
+                    <button class="btn btn-primary btn-block custom-btn" (click)="agregarAlCarrito(this.componente)">AÑADIR <br> AL CARRITO</button>
                 </div>
                 <div class="col-md-6 mb-2">
                     <button class="btn btn-success btn-block custom-btn">COMPRAR <br> AHORA</button>

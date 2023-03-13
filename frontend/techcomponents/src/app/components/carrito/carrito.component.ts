@@ -38,10 +38,10 @@ export class CarritoComponent implements OnInit {
 
   ngOnInit(): void {
     this._route.params.subscribe(params=>{
-      let id=params['id'];
-      console.log(id);
+      // let id=params['id'];
+      // console.log(id);
       
-      this.getComponent(id);
+      //this.getComponent(id);
       this.actualizarTotal();
     })
   }
@@ -104,10 +104,11 @@ export class CarritoComponent implements OnInit {
     location.reload();
   }
 
+  //calcular cuando se debe
   actualizarTotal() {
     let total = 0;
     for (const producto of this.productosEnCarrito) {
-      total += producto.precio + producto.precio;
+      total +=  producto.precio;
     }
     this.total = total;
   }

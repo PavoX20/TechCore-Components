@@ -4,6 +4,8 @@ import { Global } from '../../services/global';
 import { ActivatedRoute, Router} from '@angular/router';
 import { techComponent } from 'src/app/models/techComponent';
 import { TarjetaComponent } from '../tienda/tarjeta/tarjeta.component';
+import { CarritoComponent } from '../carrito/carrito.component';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @Component({
@@ -22,11 +24,14 @@ export class DetalleComponenteComponent implements OnInit{
   public imagenID:string;
   public imagenSeleccionada:string;
   public imagenes:NodeListOf<HTMLAnchorElement>;
+  carritoComponent: CarritoComponent;
+
 
   constructor(
     private _componenteService:ComponenteService,
     private _router:Router,
-    private _route:ActivatedRoute
+    private _route:ActivatedRoute,
+    private cookieService: CookieService,
   ) { 
     this.url=Global.url;
     this.componente=new techComponent("",[""],"","","",0,"");
@@ -36,6 +41,7 @@ export class DetalleComponenteComponent implements OnInit{
     this.imagenes = document.querySelectorAll<HTMLAnchorElement>('.imge');
     this.techComponent=[];
     this.appTarjeta = new TarjetaComponent;
+    this.carritoComponent = new CarritoComponent(_componenteService, cookieService, _route);;
   }
   ngOnInit(): void {
     this._route.params.subscribe(params=>{
@@ -43,7 +49,6 @@ export class DetalleComponenteComponent implements OnInit{
       console.log(id);
       this.getComponentes();
       this.getComponent(id);
-      
     })
   }
 
@@ -57,6 +62,11 @@ export class DetalleComponenteComponent implements OnInit{
         console.log(<any>error);
       }
     )
+  }
+
+  agregarAlCarrito(producto: techComponent): void {
+    this.carritoComponent.agregarAlCarrito(producto);
+    location.reload();
   }
 
   getComponentes(){
