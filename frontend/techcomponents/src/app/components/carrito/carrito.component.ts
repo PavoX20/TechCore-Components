@@ -20,12 +20,13 @@ export class CarritoComponent implements OnInit {
   public total:number =0;
   public modoEdicion:boolean =false;
   public opcionSeleccionada:string;
-  
-
+  private location!: Location;
   constructor(
     private _componenteService:ComponenteService,
     private cookieService: CookieService,
-    private _route:ActivatedRoute
+    private _route:ActivatedRoute,
+    private router: Router,
+    
   ) {
     this.url=Global.url;
     this.componente=new techComponent("",[""],"","","",0,"");
@@ -43,6 +44,12 @@ export class CarritoComponent implements OnInit {
       
       //this.getComponent(id);
       this.actualizarTotal();
+      if (!localStorage.getItem('foo')) { 
+        localStorage.setItem('foo', 'no reload')
+        location.reload() 
+      } else {
+        localStorage.removeItem('foo') 
+      }
     })
   }
   //traer el producto de la base de datos y mandarlo al carrito
@@ -53,6 +60,7 @@ export class CarritoComponent implements OnInit {
         this.agregarAlCarrito(this.componente);
         this.cantidadEnCarrito = this.getCantidadEnCarrito();
         console.log(this.cantidadEnCarrito);
+        this.router.navigate(['carrito'])
       },
       error=>{
         console.log(<any>error);
@@ -98,7 +106,7 @@ export class CarritoComponent implements OnInit {
   eliminarDelCarrito(producto:any[]) {
     const index = this.productosEnCarrito.indexOf(producto);
     if (index !== -1) {
-      this.productosEnCarrito.splice(index, 1);
+      this.productosEnCarrito.splice(index, 0);
       this.cookieService.set('carrito', JSON.stringify(this.productosEnCarrito));
     }
     location.reload();
@@ -108,9 +116,10 @@ export class CarritoComponent implements OnInit {
   actualizarTotal() {
     let total = 0;
     for (const producto of this.productosEnCarrito) {
-      total +=  producto.precio;
+      total += producto.precio + producto.precio;
     }
     this.total = total;
+    
   }
 
   getCantidadEnCarrito() {
