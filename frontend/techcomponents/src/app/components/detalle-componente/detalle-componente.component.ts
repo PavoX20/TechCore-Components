@@ -39,6 +39,7 @@ export class DetalleComponenteComponent implements OnInit{
     this.imagenes = document.querySelectorAll<HTMLAnchorElement>('.imge');
     this.techComponent=[];
     this.appTarjeta = new TarjetaComponent;
+    this.carritoComponent = new CarritoComponent(_componenteService, cookieService, _route);;
   }
   ngOnInit(): void {
     this._route.params.subscribe(params=>{
@@ -46,7 +47,6 @@ export class DetalleComponenteComponent implements OnInit{
       console.log(id);
       this.getComponentes();
       this.getComponent(id);
-      
     })
   }
 
@@ -60,6 +60,11 @@ export class DetalleComponenteComponent implements OnInit{
         console.log(<any>error);
       }
     )
+  }
+
+  agregarAlCarrito(producto: techComponent): void {
+    this.carritoComponent.agregarAlCarrito(producto);
+    location.reload();
   }
 
   getComponentes(){
