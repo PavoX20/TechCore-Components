@@ -4,7 +4,8 @@ import { Global } from '../../services/global';
 import { ActivatedRoute, Router} from '@angular/router';
 import { techComponent } from 'src/app/models/techComponent';
 import { TarjetaComponent } from '../tienda/tarjeta/tarjeta.component';
-
+import { CarritoComponent } from '../carrito/carrito.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-detalle-componente',
@@ -22,14 +23,16 @@ export class DetalleComponenteComponent implements OnInit{
   public imagenID:string;
   public imagenSeleccionada:string;
   public imagenes:NodeListOf<HTMLAnchorElement>;
-
+  public carrito: CarritoComponent
   constructor(
     private _componenteService:ComponenteService,
     private _router:Router,
-    private _route:ActivatedRoute
+    private _route:ActivatedRoute,
+    private cookie: CookieService
   ) { 
     this.url=Global.url;
     this.componente=new techComponent("",[""],"","","",0,"");
+    this.carrito = new CarritoComponent(_componenteService, cookie, _route, _router)
     this.confirm=false;
     this.imagenID="";
     this.imagenSeleccionada="";
@@ -92,6 +95,11 @@ export class DetalleComponenteComponent implements OnInit{
         this.imagenes[i].classList.remove('selected');
       }
     }
+  }
+
+  agregarCarrito(producto:techComponent): void{
+    this.carrito.agregarAlCarrito(producto)
+    location.reload()
   }
 
 }
