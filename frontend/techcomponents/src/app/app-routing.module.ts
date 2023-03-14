@@ -6,7 +6,8 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { LoginComponent } from './components/login/login.component';
 import { DetalleComponenteComponent } from './components/detalle-componente/detalle-componente.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
-
+import { EditarcomponentComponent } from './components/editarcomponent/editarcomponent.component';
+import { CreatecomponentComponent } from './components/createcomponent/createcomponent.component';
 const routes: Routes = [
   {path:'home',component:InicioComponent},
   {path:'componentes/:idCategoria',component:TiendaComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'detalle-componente/:id',component:DetalleComponenteComponent},
   {path:'carrito',component:CarritoComponent},
-  //{path:'carrito/:id',component:CarritoComponent}
+  {path:'guardar/:id',component:CreatecomponentComponent},
+  {path:'editar/:id',component:EditarcomponentComponent},
 ];
   
 
