@@ -6,6 +6,6 @@ export class techComponent{
         public titulo:string,
         public detalle:string,
         public precio:Number,
-        public categoria:string
+        public idCategoria:string
     ){}
 }

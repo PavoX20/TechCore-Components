@@ -131,3 +131,67 @@
 	border: 0px;
 
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.confirm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.confirm-container span {
+  margin-bottom: 10px;
+}
+
+.confirm-container a {
+  display: inline-block;
+  margin: 0 10px;
+}
+.button {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ccc;
+}
+
+.button-edit {
+    background-color: #6E3153;
+}
+
+.button-delete {
+    background-color: #0E1B3B;
+}
+
+.button-cancel {
+    background-color: #6E3153;
+}
+.button-cancel :hover {
+    background-color: #cccccc;
+}
+
+.confirm {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+

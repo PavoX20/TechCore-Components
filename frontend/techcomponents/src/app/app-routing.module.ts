@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'detalle-componente/:id',component:DetalleComponenteComponent},
   {path:'carrito',component:CarritoComponent},
-  {path:'guardar/:id',component:CreatecomponentComponent},
+  {path:'guardar',component:CreatecomponentComponent},
   {path:'editar/:id',component:EditarcomponentComponent},
 ];
   

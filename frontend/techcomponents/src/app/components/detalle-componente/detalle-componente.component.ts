@@ -23,7 +23,7 @@ export class DetalleComponenteComponent implements OnInit{
   public imagenID:string;
   public imagenSeleccionada:string;
   public imagenes:NodeListOf<HTMLAnchorElement>;
-  public carrito: CarritoComponent
+  public carritoComponent: CarritoComponent
   constructor(
     private _componenteService:ComponenteService,
     private _router:Router,
@@ -32,14 +32,13 @@ export class DetalleComponenteComponent implements OnInit{
   ) { 
     this.url=Global.url;
     this.componente=new techComponent("",[""],"","","",0,"");
-    this.carrito = new CarritoComponent(_componenteService, cookie, _route, _router)
     this.confirm=false;
     this.imagenID="";
     this.imagenSeleccionada="";
     this.imagenes = document.querySelectorAll<HTMLAnchorElement>('.imge');
     this.techComponent=[];
     this.appTarjeta = new TarjetaComponent;
-    this.carritoComponent = new CarritoComponent(_componenteService, cookieService, _route);;
+    this.carritoComponent = new CarritoComponent(_componenteService, cookie, _route, _router);
   }
   ngOnInit(): void {
     this._route.params.subscribe(params=>{
@@ -103,8 +102,26 @@ export class DetalleComponenteComponent implements OnInit{
   }
 
   agregarCarrito(producto:techComponent): void{
-    this.carrito.agregarAlCarrito(producto)
+    this.carritoComponent.agregarAlCarrito(producto)
     location.reload()
+  }
+
+  setConfirm(confirm:boolean){
+    this.confirm=confirm;
+  }
+
+
+  borrarComponente(id:String){
+    this._componenteService.deleteComponente(id).subscribe(
+      response=>{
+        //if(response.pelicula){
+          this._router.navigate(['/home']);
+        //}
+      },
+      error=>{
+        console.log(<any>error);
+      }
+    )
   }
 
 }

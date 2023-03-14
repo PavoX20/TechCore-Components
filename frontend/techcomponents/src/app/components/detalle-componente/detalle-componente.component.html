@@ -36,6 +36,18 @@
                     <button class="btn btn-success btn-block custom-btn">COMPRAR <br> AHORA</button>
                 </div>
             </div>
+
+            <p *ngIf="confirm==false" class="button-container">
+                <a [routerLink]="['/editar',componente._id]" class="button button-edit">Editar</a>
+                <a (click)="setConfirm(true)" class="button button-delete">Borrar</a>
+            </p>
+            <p *ngIf="confirm==true" class="confirm-container">
+                <span class="confirm">¿Estás seguro de eliminar el componente?</span><br>
+                <a (click)="setConfirm(false)" class="button button-cancel">Cancelar</a>
+                <a (click)="borrarComponente(componente._id)" class="button button-delete">Eliminar definitivamente</a>
+            </p>
+
+
         </div>
         <div class="col-12 col-md-2 order-md-4">
             <!-- espacio vacio -->
