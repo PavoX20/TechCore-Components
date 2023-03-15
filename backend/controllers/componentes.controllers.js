@@ -241,7 +241,7 @@ var controller={
                 var fileName = fileSplit[1];
                 var extSplit = fileName.split('\.');
                 var fileExt = extSplit[1];
-                if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
+                if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif' || fileExt == 'webp') {
                     fileNames.push(fileName);
                 } else {
                     fs.unlink(filePath, function(err) {
