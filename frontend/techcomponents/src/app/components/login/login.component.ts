@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit{
           alert(response.message)
           sesionValues.nombre=response.response.nombre
           sesionValues.apellido=response.response.apellido
+          sesionValues.usuario=response.response.user
 
-          
           alert("Usuario: "+ sesionValues.nombre+" "+sesionValues.apellido)
         }else{
           alert("Se ha producido un error: "+response.message)

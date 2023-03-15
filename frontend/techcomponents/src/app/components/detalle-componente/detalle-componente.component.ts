@@ -6,6 +6,7 @@ import { techComponent } from 'src/app/models/techComponent';
 import { TarjetaComponent } from '../tienda/tarjeta/tarjeta.component';
 import { CarritoComponent } from '../carrito/carrito.component';
 import { CookieService } from 'ngx-cookie-service';
+import { sesionValues } from 'src/app/services/sesion';
 
 @Component({
   selector: 'app-detalle-componente',
@@ -124,5 +125,12 @@ export class DetalleComponenteComponent implements OnInit{
     )
   }
 
+  isAdmin(){
+    if(sesionValues.usuario=="pablo"){
+      return true
+    }else{
+      return false
+    }
+}
 }
 

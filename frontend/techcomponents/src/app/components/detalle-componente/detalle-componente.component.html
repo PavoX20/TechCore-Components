@@ -37,6 +37,8 @@
                 </div>
             </div>
 
+        <div *ngIf="isAdmin()">
+
             <p *ngIf="confirm==false" class="button-container">
                 <a [routerLink]="['/editar',componente._id]" class="button button-edit">Editar</a>
                 <a (click)="setConfirm(true)" class="button button-delete">Borrar</a>
@@ -46,7 +48,7 @@
                 <a (click)="setConfirm(false)" class="button button-cancel">Cancelar</a>
                 <a (click)="borrarComponente(componente._id)" class="button button-delete">Eliminar definitivamente</a>
             </p>
-
+        </div>
 
         </div>
         <div class="col-12 col-md-2 order-md-4">

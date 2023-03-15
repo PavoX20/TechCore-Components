@@ -19,7 +19,16 @@
                       <li><a class="dropdown-item" [routerLink]="['/componentes', '640982325693476b531502aa']">Categoria 3</a></li>
                     </ul>
                   </div>
-                <a class="nav-item nav-link" [routerLink]="['/registro']">Registro</a>
+
+
+                <a *ngIf="!isLoged()" class="nav-item nav-link" [routerLink]="['/registro2']">Registro</a>
+
+                <a *ngIf="!isLoged()" class="nav-item nav-link" [routerLink]="['/login']">Login</a>
+
+                <a *ngIf="isLoged()" class="nav-item nav-link">{{this.nombreLoged}}</a>
+
+                <a *ngIf="isLoged()" class="nav-item nav-link" [routerLink]="['/logout']">Cerrar sesión</a>
+
                 <a class="nav-item nav-link disabled" tabindex="-1" ></a>
             </div>
             <div class="navbar-nav ms-auto">

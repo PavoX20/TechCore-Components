@@ -19,8 +19,8 @@ export class UsuarioService{
 
 
     //Registro
-    guardarRegistro(registro:Registro):Observable<any>{
-        let params:any={user: registro.usuario, password: registro.password, nombre: registro.nombre, apellido: registro.apellido}
+    guardarRegistro(params:any):Observable<any>{
+        
         params=JSON.stringify(params)
         
         let headers=new HttpHeaders().set('Content-Type','application/json');
@@ -39,5 +39,6 @@ export class UsuarioService{
         
         return this._http.post(this.url+'login',params,{headers:headers});
     }
+
 
 }

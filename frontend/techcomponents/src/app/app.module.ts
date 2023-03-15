@@ -23,6 +23,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { EditarcomponentComponent } from './components/editarcomponent/editarcomponent.component';
 import { CreatecomponentComponent } from './components/createcomponent/createcomponent.component';
 import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { Registro2Component } from './registro2/registro2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,9 @@ import { LoginComponent } from './components/login/login.component';
     InicioComponent,
     LoginComponent,
     EditarcomponentComponent,
-    CreatecomponentComponent
+    CreatecomponentComponent,
+    LogoutComponent,
+    Registro2Component
   ],
   imports: [
     BrowserModule,
