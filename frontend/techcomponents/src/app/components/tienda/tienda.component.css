@@ -1,0 +1,1829 @@
+
+.motherboard {
+  width: 75%;
+  height: 300px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.banner{
+  text-align: center;
+  background-color: #181f3c;
+}
+.algunasMarcasPopulares{
+  width: 500px;
+  height: 100px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  background-color: #23233d;
+  text-align: center;
+  font-size: 57px;
+  color: #6d3155;
+}
+.algunasMarcasPopulares2{
+  background-color: #6e3153;
+}
+
+.frame1 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+.icons8Asus1281 {
+  width: 95px;
+  height: 87px;
+  background-image: url('/assets/icons8Asus1281.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.asus {
+  color: #6e3153;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+  text-align: center;
+}
+.frame12 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+.icons8Msi961 {
+  width: 96px;
+  height: 96px;
+  background-image: url('/assets/icons8Msi961.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.frame2 {
+  width: min-content;
+  height: min-content;
+}
+.mSI {
+  color: #232241;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.frame13 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+.eVGA_logo_black1 {
+  width: 228px;
+  height: 64px;
+  background-image: url('/assets/eVGA_logo_black1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.frame3 {
+  width: min-content;
+  height: min-content;
+}
+.eVGA {
+  color: #6e3153;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.frame14 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+.intel_logo_20062020Png1 {
+  width: 149px;
+  height: 101px;
+  background-image: url('/assets/intel_logo_20062020Png1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.frame4 {
+  width: min-content;
+  height: min-content;
+}
+.iNTEL {
+  color: #232241;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.catalogo {
+  background-color: #703050;
+  color: #232241;
+  font-size: 72px;
+  line-height: 130%;
+  font-family: Bebas Neue, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 288px;
+  height: 95px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footerBig5 {
+  width: 100%;
+  align-items: flex-start;
+  gap: 125px;
+  padding: 64px 165px 200px;
+  background-color: #0b0d17;
+}
+.companyInfo {
+  width: min-content;
+  height: min-content;
+
+}
+.logotypeLight {
+  position: relative;
+  width: 20%;
+  height: 20%;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.landify {
+  overflow: visible;
+  font-size: 50px;
+  color: #ffffff;
+  font-weight:bolder;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.icons8Redhat321 {
+  width: auto;
+  height: auto;
+  background-image: url('/assets/icons8Redhat321.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.copyright {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+}
+.copyright2020LandifyUIKit {
+  color: #d9dbe1;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 350px;
+  height: min-content;
+  flex-direction: column;
+}
+.allRightsReserved {
+  color: #d9dbe1;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 350px;
+  height: min-content;
+  flex-direction: column;
+}
+.socialLinks {
+  width: min-content;
+  height: min-content;
+  align-items: flex-start;
+  gap: 16px;
+  overflow: hidden;
+}
+.links {
+  width: min-content;
+  height: min-content;
+  align-items: flex-start;
+  gap: 30px;
+  overflow: hidden;
+}
+.col1 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  overflow: hidden;
+}
+.compania {
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.listItems {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  overflow: hidden;
+}
+.acercaDe {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.blog {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.contactanos {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.col2 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  overflow: hidden;
+}
+.soporte {
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.listItems2 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  overflow: hidden;
+}
+.callCenter {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.terminosDeServicio {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.status {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.col3 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  overflow: hidden;
+}
+.mantenteAlDia {
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.emailInputField {
+  position: relative;
+  width: 255px;
+  height: 40px;
+}
+.inputFieldBG {
+  border-radius: 8px;
+  background-color: #fff;
+}
+.yourEmailAddress {
+  color: black;
+  background-color: #d9dbe1;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.servicios {
+  width: 1920px;
+  height: 286px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.error{
+  width: 500px;
+  height: 100px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  background-color: darkred;
+  text-align: center;
+  font-size: 57px;
+  color: #ffffff;
+}
+.sinProducto{
+  width: 500px;
+  height: 100px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  background-color: #9ca0ac;
+  text-align: center;
+  font-size: 48px;
+  color: #06010c;
+}
+/* .icons8AgregarACarritoDeCompras {
+  position: absolute;
+  left: 1810px;
+  top: 55px;
+  width: 50px;
+  height: 50px;
+  background-image: url('/assets/icons8AgregarACarritoDeCompras.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icons8Usuario5011 {
+  position: absolute;
+  left: 1702px;
+  top: 55px;
+  width: 50px;
+  height: 50px;
+  background-image: url('/assets/icons8Usuario5011.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footerBig5 {
+  position: absolute;
+  left: 0;
+  top: 1840px;
+  width: 1920px;
+  height: 359px;
+  align-items: flex-start;
+  gap: 125px;
+  padding: 64px 165px 866px;
+  background-color: #0b0d17;
+}
+.companyInfo {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  overflow: hidden;
+}
+.logotypeLight {
+  position: relative;
+  width: 120px;
+  height: 32px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.landify {
+  position: absolute;
+  left: 35.4285%;
+  right: 0.1131%;
+  top: 23.2858%;
+  bottom: 10.6769%;
+  overflow: visible;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.icons8Redhat321 {
+  position: absolute;
+  left: 3.3333%;
+  right: 70%;
+  top: 0;
+  bottom: 0;
+  background-image: url('/assets/icons8Redhat321.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.copyright {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+}
+.copyright2020LandifyUIKit {
+  color: #d9dbe1;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 350px;
+  height: min-content;
+  flex-direction: column;
+}
+.allRightsReserved {
+  color: #d9dbe1;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 350px;
+  height: min-content;
+  flex-direction: column;
+}
+.socialLinks {
+  width: min-content;
+  height: min-content;
+  align-items: flex-start;
+  gap: 16px;
+  overflow: hidden;
+}
+.links {
+  width: min-content;
+  height: min-content;
+  align-items: flex-start;
+  gap: 30px;
+  overflow: hidden;
+}
+.col1 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  overflow: hidden;
+}
+.compania {
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.listItems {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  overflow: hidden;
+}
+.acercaDe {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.blog {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.contactanos {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.col2 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  overflow: hidden;
+}
+.soporte {
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.listItems2 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  overflow: hidden;
+}
+.callCenter {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.terminosDeServicio {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.status {
+  color: #d9dbe1;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.col3 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  overflow: hidden;
+}
+.mantenteAlDia {
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 160px;
+  height: min-content;
+  flex-direction: column;
+}
+.emailInputField {
+  position: relative;
+  width: 255px;
+  height: 40px;
+}
+.inputFieldBG {
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.yourEmailAddress {
+  color: #d9dbe1;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 4.7059%;
+  right: 45.098%;
+  top: 22.5%;
+  bottom: 17.5%;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.servicios {
+  position: absolute;
+  left: 0;
+  top: 625px;
+  width: 1920px;
+  height: 286px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.frame1 {
+  position: absolute;
+  left: 143px;
+  top: 39px;
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+}
+.icons8Asus1281 {
+  width: 95px;
+  height: 87px;
+  background-image: url('/assets/icons8Asus1281.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.asus {
+  color: #6e3153;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.informacion {
+  color: #000;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 252px;
+  height: 59px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame12 {
+  position: absolute;
+  left: 597px;
+  top: 36px;
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+}
+.icons8Msi961 {
+  width: 96px;
+  height: 96px;
+  background-image: url('/assets/icons8Msi961.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.frame2 {
+  width: min-content;
+  height: min-content;
+}
+.mSI {
+  color: #232241;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.verCatalogo {
+  color: #000;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 252px;
+  height: 59px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame13 {
+  position: absolute;
+  left: 1051px;
+  top: 60px;
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+}
+.eVGA_logo_black1 {
+  width: 228px;
+  height: 64px;
+  background-image: url('/assets/eVGA_logo_black1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.frame3 {
+  width: min-content;
+  height: min-content;
+}
+.eVGA {
+  color: #6e3153;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.verCatalogo2 {
+  color: #000;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 252px;
+  height: 59px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame14 {
+  position: absolute;
+  left: 1430px;
+  top: 46px;
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+}
+.intel_logo_20062020Png1 {
+  width: 149px;
+  height: 101px;
+  background-image: url('/assets/intel_logo_20062020Png1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.frame4 {
+  width: min-content;
+  height: min-content;
+}
+.iNTEL {
+  color: #232241;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.verCatalogo3 {
+  color: #000;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 252px;
+  height: 59px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame32 {
+  position: absolute;
+  left: 1066px;
+  top: 1041px;
+  width: 258px;
+  height: 326px;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  gap: 23px;
+  outline: solid 1px #131313;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.frame22 {
+  z-index: 0;
+  width: 113px;
+  height: 21px;
+}
+.agotado {
+  color: #4c4c5178;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.icons8SoporteEnLinea961 {
+  z-index: 0;
+  width: 129px;
+  height: 75px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  background-image: url('/assets/icons8SoporteEnLinea961.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mOTHERBOARDASUSSTRIXB550FGAMIN {
+  z-index: 0;
+  width: 252px;
+  height: 45px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.list {
+  font-size: 14px;
+}
+.list ::marker {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.icons8AgregarACarritoDeCompras2 {
+  z-index: 0;
+  width: 47px;
+  height: 36px;
+  background-image: url('/assets/icons8AgregarACarritoDeCompras2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._100 {
+  color: #232241;
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: 102px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame9 {
+  position: absolute;
+  left: 1503px;
+  top: 1052px;
+  width: 258px;
+  height: 326px;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  gap: 23px;
+  outline: solid 1px #131313;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.frame23 {
+  z-index: 0;
+  width: 113px;
+  height: 21px;
+}
+.reservar {
+  color: #232241;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.icons8SoporteEnLinea9612 {
+  z-index: 0;
+  width: 129px;
+  height: 75px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  background-image: url('/assets/icons8SoporteEnLinea9612.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mOTHERBOARDASUSSTRIXB550FGAMIN2 {
+  z-index: 0;
+  width: 252px;
+  height: 45px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.list2 {
+  font-size: 14px;
+}
+.list2 ::marker {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock2 {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.icons8AgregarACarritoDeCompras3 {
+  z-index: 0;
+  width: 47px;
+  height: 36px;
+  background-image: url('/assets/icons8AgregarACarritoDeCompras3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1002 {
+  color: #232241;
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: 102px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame10 {
+  position: absolute;
+  left: 126px;
+  top: 1402px;
+  width: 258px;
+  height: 326px;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  gap: 23px;
+  outline: solid 1px #131313;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.frame24 {
+  z-index: 0;
+  width: 113px;
+  height: 21px;
+}
+.reservar2 {
+  color: #232241;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.icons8SoporteEnLinea9613 {
+  z-index: 0;
+  width: 129px;
+  height: 75px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  background-image: url('/assets/icons8SoporteEnLinea9613.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mOTHERBOARDASUSSTRIXB550FGAMIN3 {
+  z-index: 0;
+  width: 252px;
+  height: 45px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.list3 {
+  font-size: 14px;
+}
+.list3 ::marker {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock3 {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.icons8AgregarACarritoDeCompras4 {
+  z-index: 0;
+  width: 47px;
+  height: 36px;
+  background-image: url('/assets/icons8AgregarACarritoDeCompras4.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1003 {
+  color: #232241;
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: 102px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame11 {
+  position: absolute;
+  left: 566px;
+  top: 1402px;
+  width: 258px;
+  height: 326px;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  gap: 23px;
+  outline: solid 1px #131313;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.frame25 {
+  z-index: 0;
+  width: 113px;
+  height: 21px;
+}
+.reservar3 {
+  color: #232241;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.icons8SoporteEnLinea9614 {
+  z-index: 0;
+  width: 129px;
+  height: 75px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  background-image: url('/assets/icons8SoporteEnLinea9614.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mOTHERBOARDASUSSTRIXB550FGAMIN4 {
+  z-index: 0;
+  width: 252px;
+  height: 45px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.list4 {
+  font-size: 14px;
+}
+.list4 ::marker {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock4 {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.icons8AgregarACarritoDeCompras5 {
+  z-index: 0;
+  width: 47px;
+  height: 36px;
+  background-image: url('/assets/icons8AgregarACarritoDeCompras5.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1004 {
+  color: #232241;
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: 102px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame122 {
+  position: absolute;
+  left: 1066px;
+  top: 1391px;
+  width: 258px;
+  height: 326px;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  gap: 23px;
+  outline: solid 1px #131313;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.frame26 {
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+}
+.icons8SoporteEnLinea9615 {
+  width: 129px;
+  height: 75px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  background-image: url('/assets/icons8SoporteEnLinea9615.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.reservar4 {
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.labelWrapper {
+  font-size: 16px;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  flex-shrink: 1;
+}
+.label4 {
+  color: #111f43;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+}
+.label5 {
+  color: #232241;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+}
+.mOTHERBOARDASUSSTRIXB550FGAMIN5 {
+  z-index: 0;
+  width: 252px;
+  height: 45px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.list5 {
+  font-size: 14px;
+}
+.list5 ::marker {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock5 {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+._1005 {
+  z-index: 0;
+  width: 70px;
+  height: 23px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.labelWrapper2 {
+  font-size: 10px;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  flex-shrink: 1;
+}
+.label6 {
+  color: #23224187;
+  font-size: 10px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: lowercase;
+  text-decoration: line-through;
+}
+.label7 {
+  color: #232241;
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: lowercase;
+}
+.icons8AgregarACarritoDeCompras6 {
+  z-index: 0;
+  width: 47px;
+  height: 36px;
+  background-image: url('/assets/icons8AgregarACarritoDeCompras6.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._999 {
+  color: #6e3153;
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: lowercase;
+  z-index: 0;
+  width: 130px;
+  height: 25px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame132 {
+  position: absolute;
+  left: 1500px;
+  top: 1393px;
+  width: 258px;
+  height: 326px;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  gap: 23px;
+  outline: solid 1px #131313;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.frame27 {
+  z-index: 0;
+  width: 113px;
+  height: 21px;
+}
+.reservar5 {
+  color: #232241;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.edicionLimitada {
+  color: #633628;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.icons8SoporteEnLinea9616 {
+  z-index: 0;
+  width: 129px;
+  height: 75px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  background-image: url('/assets/icons8SoporteEnLinea9616.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mOTHERBOARDASUSSTRIXB550FGAMIN6 {
+  z-index: 0;
+  width: 252px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.list6 {
+  font-size: 14px;
+}
+.list6 ::marker {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock6 {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.icons8AgregarACarritoDeCompras7 {
+  z-index: 0;
+  width: 47px;
+  height: 36px;
+  background-image: url('/assets/icons8AgregarACarritoDeCompras7.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1006 {
+  color: #232241;
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: 102px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame8 {
+  position: absolute;
+  left: 563px;
+  top: 1046px;
+  width: 258px;
+  height: 326px;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  gap: 23px;
+  outline: solid 1px #131313;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.frame28 {
+  z-index: 0;
+  width: 113px;
+  height: 21px;
+}
+.reservar6 {
+  color: #232241;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.icons8SoporteEnLinea9617 {
+  z-index: 0;
+  width: 130.5px;
+  height: 84.5px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  background-image: url('/assets/icons8SoporteEnLinea9617.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mOTHERBOARDASUSSTRIXB550FGAMIN7 {
+  z-index: 0;
+  width: 252px;
+  height: 45px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.list7 {
+  font-size: 14px;
+}
+.list7 ::marker {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock7 {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.icons8AgregarACarritoDeCompras8 {
+  z-index: 0;
+  width: 47px;
+  height: 36px;
+  background-image: url('/assets/icons8AgregarACarritoDeCompras8.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1007 {
+  color: #232241;
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: 102px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame7 {
+  position: absolute;
+  left: 126px;
+  top: 1045px;
+  width: 258px;
+  height: 326px;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  gap: 23px;
+  outline: solid 1px #131313;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.frame29 {
+  z-index: 0;
+  width: 113px;
+  height: 21px;
+}
+.reservar7 {
+  color: #232241;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.icons8SoporteEnLinea9618 {
+  z-index: 0;
+  width: 145.5px;
+  height: 80.5px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  background-image: url('/assets/icons8SoporteEnLinea9618.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mOTHERBOARDASUSSTRIXB550FGAMIN8 {
+  z-index: 0;
+  width: 252px;
+  height: 45px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.list8 {
+  font-size: 14px;
+}
+.list8 ::marker {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock8 {
+  color: #0a0a0a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 800;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.icons8AgregarACarritoDeCompras9 {
+  z-index: 0;
+  width: 47px;
+  height: 36px;
+  background-image: url('/assets/icons8AgregarACarritoDeCompras9.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1008 {
+  color: #232241;
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: bold;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 0;
+  width: 102px;
+  height: 47px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.rectangle593 {
+  position: absolute;
+  left: 0;
+  top: 911px;
+  width: 1920px;
+  height: 88.9362px;
+  background-color: #6e3153;
+}
+.catalogo {
+  color: #232241;
+  font-size: 72px;
+  line-height: 130%;
+  font-family: Bebas Neue, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 816px;
+  top: 911px;
+  width: 288px;
+  height: 95px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.categoria {
+  color: #232241;
+
+  font-family: Bebas Neue, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 100px;
+  top: 1300px;
+  width: 288px;
+  height: 95px;
+  text-align: center;
+  align-items: center;
+}
+
+.rectangle592 {
+  position: absolute;
+  left: 0;
+  top: 547px;
+  width: 1919px;
+  height: 97.3981px;
+  background-color: #232241;
+}
+.algunasMarcasPopulares {
+  color: #6e3153;
+  font-size: 50px;
+  line-height: 130%;
+  font-family: Bebas Neue, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 525.0598px;
+  top: 556.9612px;
+  width: 864.8826px;
+  height: 104.0388px;
+  flex-direction: column;
+}
+.image2 {
+  position: absolute;
+  left: 1832px;
+  top: 1767px;
+  width: 55px;
+  height: 55px;
+  background-image: url('/assets/image2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image3 {
+  position: absolute;
+  left: 866px;
+  top: 1755px;
+  width: 200px;
+  height: 67px;
+  background-image: url('/assets/image3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */

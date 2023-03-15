@@ -1,0 +1,765 @@
+.marcas{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.banner{
+    text-align: center;
+    background-color: #181f3c;
+}
+.radeon{
+    width: 40%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.experience{
+    width: 500px;
+    height: 100px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    background-color: #23233d;
+    text-align: center;
+    font-size: 57px;
+    color: #6d3155;
+}
+.garantias{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.frame1 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    gap: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons8Garantia901 {
+    width: 90px;
+    height: 90px;
+    background-image: url('/assets/icons8Garantia901.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.frame3 {
+    width: min-content;
+    height: min-content;
+}
+.pRODUCTOSGARANTIZADOS {
+    color: #6e3153;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+.equiposOriginalesTeOtorgamos1A {
+    color: #000;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 252px;
+    height: 59px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+.frame12 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    gap: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons8SoporteEnLinea961 {
+    width: 96px;
+    height: 96px;
+    background-image: url('/assets/icons8SoporteEnLinea961.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.frame2 {
+    width: min-content;
+    height: min-content;
+}
+.aTENDEMOSTODASTUSDUDAS {
+    color: #232241;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+}
+.anteCualquierDudaNoDudesEnPreg {
+    color: #000;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 252px;
+    height: 59px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+.frame13 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    gap: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons8EntregaDeAlimentos1001 {
+    width: 100px;
+    height: 100px;
+    background-image: url('/assets/icons8EntregaDeAlimentos1001.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.frame4 {
+    width: min-content;
+    height: min-content;
+}
+.eNTREGASADOMICILIO {
+    color: #232241;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+}
+.entregasPorServientregaATodoEl {
+    color: #000;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 252px;
+    height: 59px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+.frame14 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    gap: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons8Usuario961 {
+    width: 96px;
+    height: 96px;
+    background-image: url('/assets/icons8Usuario961.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.servicioPErsonalizado {
+    color: #6e3153;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+}
+.nosEncargamosDeEscogerLasMejor {
+    color: #000;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 252px;
+    height: 59px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mejores{
+    background-color: #703050;
+  color: #232241;
+  font-size: 72px;
+  line-height: 130%;
+  font-family: Bebas Neue, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 288px;
+  height: 95px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.marcasDeTarjetasGraficas51 {
+    position: relative;
+    margin-left: 42.35%;
+    width: 1148.3871px;
+    height: 349px;
+    background-image: url('/assets/marcasDeTarjetasGraficas51.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-mask-image:/* webpackIgnore: true */ url('/assets/maskGroup2.svg');
+    mask-image:/* webpackIgnore: true */ url('/assets/maskGroup2.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: background-size 1s ease-in;
+}
+
+.marcasDeTarjetasGraficas51:hover{
+    background-size: 110%;
+}
+
+.rTX40_kv1 {
+    position: relative;
+    width: 1148.3871px;
+    height: 349px;
+    transform: scaleX(-1);
+    background-image: url('/assets/rTX40_kv1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-mask-image:/* webpackIgnore: true */ url('/assets/maskGroup.svg');
+    mask-image:/* webpackIgnore: true */ url('/assets/maskGroup.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: background-size 1s ease-in;
+}
+
+.rTX40_kv1:hover{
+    background-size: 110%;
+}
+
+.frame5 {
+    position: relative;
+    width: 1920px;
+    height: 661px;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .frame52 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+  }
+  .icons8UnidadC21001 {
+    width: 100px;
+    height: 100px;
+    background-image: url('/assets/icons8UnidadC21001.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .discoDuroMecanicoHDD {
+    color: #6e3153;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .frame9 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+  }
+  .icons8PowerSupply621 {
+    width: 112px;
+    height: 97px;
+    background-image: url('/assets/icons8PowerSupply621.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .fuenteDePoder {
+    color: #232241;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .frame7 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+  }
+  .icons8ComputerCase621 {
+    width: 102px;
+    height: 101px;
+    background-image: url('/assets/icons8ComputerCase621.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .caseGabinete {
+    color: #6e3153;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .frame10 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+  }
+  .icons8Ram961 {
+    width: 132px;
+    height: 116px;
+    background-image: url('/assets/icons8Ram961.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .rAM {
+    color: #6e3153;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .frame11 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+  }
+  .icons8PlacaBase10011 {
+    width: 100px;
+    height: 100px;
+    background-image: url('/assets/icons8PlacaBase10011.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .motherboard {
+    color: #232241;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .frame6 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+  }
+  .icons8Ssd1001 {
+    width: 100px;
+    height: 100px;
+    background-image: url('/assets/icons8Ssd1001.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .unidadDeEstadoSolido {
+    color: #232241;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .frame122 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    place-content: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+  }
+  .icons8CabezaDelVentilador901 {
+    width: 90px;
+    height: 90px;
+    background-image: url('/assets/icons8CabezaDelVentilador901.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .refrigeracionDeCPU {
+    color: #6e3153;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .frame8 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+  }
+  .icons8Electronicos901 {
+    width: 90px;
+    height: 90px;
+    background-image: url('/assets/icons8Electronicos901.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .procesadores {
+    color: #232241;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    text-transform: uppercase;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .footerBig5 {
+    width: 100%;
+    align-items: flex-start;
+    gap: 125px;
+    padding: 64px 165px 200px;
+    background-color: #0b0d17;
+  }
+  .companyInfo {
+    width: min-content;
+    height: min-content;
+  
+  }
+  .logotypeLight {
+    position: relative;
+    width: 20%;
+    height: 20%;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .landify {
+    overflow: visible;
+    font-size: 50px;
+    color: #ffffff;
+    font-weight:bolder;
+  }
+  .icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .icons8Redhat321 {
+    width: auto;
+    height: auto;
+    background-image: url('/assets/icons8Redhat321.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .copyright {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+  }
+  .copyright2020LandifyUIKit {
+    color: #d9dbe1;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 350px;
+    height: min-content;
+    flex-direction: column;
+  }
+  .allRightsReserved {
+    color: #d9dbe1;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 350px;
+    height: min-content;
+    flex-direction: column;
+  }
+  .socialLinks {
+    width: min-content;
+    height: min-content;
+    align-items: flex-start;
+    gap: 16px;
+    overflow: hidden;
+  }
+  .links {
+    width: min-content;
+    height: min-content;
+    align-items: flex-start;
+    gap: 30px;
+    overflow: hidden;
+  }
+  .col1 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    overflow: hidden;
+  }
+  .compania {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 160px;
+    height: min-content;
+    flex-direction: column;
+  }
+  .listItems {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    overflow: hidden;
+  }
+  .acercaDe {
+    color: #d9dbe1;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 160px;
+    height: min-content;
+    flex-direction: column;
+  }
+  .blog {
+    color: #d9dbe1;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 160px;
+    height: min-content;
+    flex-direction: column;
+  }
+  .contactanos {
+    color: #d9dbe1;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 160px;
+    height: min-content;
+    flex-direction: column;
+  }
+  .col2 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    overflow: hidden;
+  }
+  .soporte {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 160px;
+    height: min-content;
+    flex-direction: column;
+  }
+  .listItems2 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    overflow: hidden;
+  }
+  .callCenter {
+    color: #d9dbe1;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 160px;
+    height: min-content;
+    flex-direction: column;
+  }
+  .terminosDeServicio {
+    color: #d9dbe1;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 160px;
+    height: min-content;
+    flex-direction: column;
+  }
+  .status {
+    color: #d9dbe1;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 160px;
+    height: min-content;
+    flex-direction: column;
+  }
+  .col3 {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    overflow: hidden;
+  }
+  .mantenteAlDia {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    width: 160px;
+    height: min-content;
+    flex-direction: column;
+  }
+  .emailInputField {
+    position: relative;
+    width: 255px;
+    height: 40px;
+  }
+  .inputFieldBG {
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  .yourEmailAddress {
+    color: black;
+    background-color: #d9dbe1;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .servicios {
+    width: 1920px;
+    height: 286px;
+    align-items: flex-start;
+    overflow: hidden;
+  }

@@ -1,0 +1,92 @@
+.container {
+    margin-top: 40px; /* desplaza el contenedor 50px hacia abajo */
+    max-width: 50%;
+    
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* divide en dos columnas por defecto */
+    grid-gap: 10px; /* agrega un espacio entre los elementos */
+    justify-content: center;
+}
+
+/* Configura la cuadrícula para tener solo una columna en la segunda fila */
+.grid-container:nth-child(2) {
+grid-template-columns: 1fr;
+}
+
+/* Agrega un borde a los elementos de la cuadrícula para mayor claridad */
+.grid-item {
+
+padding: 10px;
+}
+
+.nombre {
+color: #232241;
+font-size: 12px;
+}
+.subto{
+    text-align: center;
+    color: #6E3153;
+    font-weight: bold;
+}
+
+.opcion-text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    
+
+}
+.precio {
+    color: #6E3153;
+    font-weight: bold;
+}
+.producto{
+    font-size: 20px;
+}
+
+.subtotal{
+    font-size: 20px;
+    text-align: right;
+}
+.total-text {
+    color: #6E3153;
+    font-weight: bold;
+}
+ul {
+    list-style: none;
+}
+
+.bot{
+    text-align: center;
+}
+
+.grid-container:nth-child(6) {
+    grid-template-columns: 1fr;
+}
+.botones{
+    text-align: center;
+}
+.btn-editar {
+    background-color: #0E1B3B; /* azul */
+    color: #fff; /* texto blanco */
+    font-size: 16px; /* tamaño de fuente */
+    padding: 10px 20px; /* padding vertical y horizontal */
+    margin-right: 10px; /* margen derecho */
+    border: none; /* sin borde */
+    border-radius: 5px; /* bordes redondeados */
+    cursor: pointer; /* cursor de tipo pointer */
+  }
+  
+  .btn-vaciar {
+    background-color: #6E3153; /* rojo */
+    color: #fff; /* texto blanco */
+    font-size: 16px; /* tamaño de fuente */
+    padding: 10px 20px; /* padding vertical y horizontal */
+    margin-right: 10px; /* margen derecho */
+    border: none; /* sin borde */
+    border-radius: 5px; /* bordes redondeados */
+    cursor: pointer; /* cursor de tipo pointer */
+  }
