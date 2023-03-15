@@ -25,6 +25,8 @@
 
                 <a *ngIf="!isLoged()" class="nav-item nav-link" [routerLink]="['/login']">Login</a>
 
+                <a *ngIf="isAdmin()" class="nav-item nav-link" [routerLink]="['/guardar']">Guardar Componente</a>
+
                 <a *ngIf="isLoged()" class="nav-item nav-link">{{this.nombreLoged}}</a>
 
                 <a *ngIf="isLoged()" class="nav-item nav-link" [routerLink]="['/logout']">Cerrar sesión</a>

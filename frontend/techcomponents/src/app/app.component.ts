@@ -26,4 +26,11 @@ export class AppComponent implements OnInit {
     this.nombreLoged=sesionValues.nombre
     return this.pattern.test(sesionValues.usuario);
   }
+  isAdmin(){
+    if(sesionValues.usuario=="pablo"){
+      return true
+    }else{
+      return false
+    }
+  }
 }
