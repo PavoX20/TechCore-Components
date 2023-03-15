@@ -10,24 +10,26 @@
             <br>
             <br>
 
-            <div style="max-width: 300px; margin: 0 auto; text-align: center; background-color: rgba(0, 0,0, 0.5); color: white; border-radius: 20px; box-shadow: 2px 2px 2px rgb(0, 0, 0);">
+            <div style="max-width: 300px; margin: 0 auto; text-align: center; background-color: rgba(0, 0,0, 0.5); color: white; border-radius: 20px; box-shadow: 2px 2px 2px rgb(0, 0, 0);" >
                 <br>
                 <br>
                 <br>
 
               <h1 >Login</h1>
               
-              <input class="inputLogin" type="text" style="background-color: rgba(255, 255,255, 0.5); color: white; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" placeholder="Usuario">
+              <input class="inputLogin" type="text" style="background-color: rgba(255, 255,255, 0.5); color: white; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" placeholder="Usuario" name="user" #ngUser="ngModel" [(ngModel)]="this.user
+              " required>
 
               <br><br>
 
               
-              <input class="inputLogin" type="text" style="background-color: rgba(255, 255,255, 0.5); color: white; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" placeholder="Contraseña">
+              <input class="inputLogin" type="text" style="background-color: rgba(255, 255,255, 0.5); color: white; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" placeholder="Contraseña" name="password" #ngPassword="ngModel" [(ngModel)]="this.password
+              " required  placeholder="Contraseña" >
 
               <br>
               <br>
 
-              <input class="inputLogin" type="submit" style="background-color: rgb(22, 0, 163); color: white; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 30px; width: 100px;" value="Login">
+              <input class="inputLogin" type="submit" style="background-color: rgb(22, 0, 163); color: white; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 30px; width: 100px;" value="Login" [routerLink]="'/inicio'" (click)="login()">
 
               <br>
               <br>

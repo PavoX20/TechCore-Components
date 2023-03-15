@@ -1,13 +1,22 @@
 body {
-    background-image: url("../../../assets/registro/abstractLogoCGIYellowGraphicDe.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 1080px;
-    border-top: 100px solid black;
-    border-bottom: 300px solid black;
-  }
+  background-image: url("../../../assets/registro/abstractLogoCGIYellowGraphicDe.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 1080px;
+  border-top: 100px solid black;
+  border-bottom: 300px solid black;
+}
+
+.inputLogin::placeholder{
+  color:aliceblue
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(75, 75, 75);
+  opacity: 1; /* Firefox */
+}
   
   
 

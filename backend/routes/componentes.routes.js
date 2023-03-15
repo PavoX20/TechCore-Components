@@ -4,7 +4,7 @@ var router=express.Router();
 var componentesRouter=require('../controllers/componentes.controllers');
 var multiparty=require('connect-multiparty');
 var multipartyMiddleWare=multiparty({uploadDir:'./uploads'});
-
+var usuariosRouter=require('../controllers/usuario.controllers')
 
 //pagina de inicio
 router.get('/inicio',componentesRouter.getInicio);
@@ -45,5 +45,16 @@ router.get('/get-imagenes/:id',componentesRouter.getAllImages);
 // router.get('/tarjetaGrafica:id',componentesRouter.detalleComponente);
 // router.get('/procesador-detalles',componentesRouter.detallesProcesador);
 
+
+
+
+//Guardar Usuario
+router.post('/registro-usuario',usuariosRouter.saveUsuario);
+
+//Login
+router.post('/login',usuariosRouter.login);
+
+//Logout
+router.get('/logout',usuariosRouter.logout);
 
 module.exports=router;

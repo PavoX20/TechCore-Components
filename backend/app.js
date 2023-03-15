@@ -30,4 +30,5 @@ app.use(cookieParser());
 
 
 app.use('/',componentesRoutes);
+
 module.exports=app;
