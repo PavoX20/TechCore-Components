@@ -14,8 +14,7 @@
             <div style="max-width: 300px; margin: 0 auto; text-align: center; background-color: rgba(0, 0,0, 0.5); color: white; border-radius: 20px; box-shadow: 2px 2px 2px rgb(0, 0, 0);">
               <h1 >Registro</h1>
               <h6 style="padding-right: 80px;">Nombre:</h6>
-              <input type="text" style="background-color: rgba(255, 255,255, 0.5); color: black; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" name="nombre" #ngNombre="ngModel" [(ngModel)]="this.reg.nombre
-              " required  placeholder="Nombre" pattern="^\w+$">
+              <input type="text" style="background-color: rgba(255, 255,255, 0.5); color: black; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" name="nombre"  (ngModel)="this.reg.nombre" required  placeholder="Nombre" pattern="^\w+$">
 
                 <span *ngIf="ngNombre.touched && !ngNombre.valid">
                   * Nombre no es válido
@@ -24,7 +23,7 @@
               <br><br>
 
               <h6 style="padding-right: 80px;">Apellido:</h6>
-              <input type="text" style="background-color: rgba(255, 255,255, 0.5); color: black; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" name="apellido" #ngApellido="ngModel" [(ngModel)]="this.reg.apellido
+              <input type="text" style="background-color: rgba(255, 255,255, 0.5); color: black; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" name="apellido"  (ngModel)="this.reg.apellido
               " required  placeholder="Apellido" pattern="^\w+$">
               <span *ngIf="ngApellido.touched && !ngApellido.valid">
                 * Apellido no es válido
@@ -32,7 +31,7 @@
               <br> <br>
 
               <h6 style="padding-right: 80px;">Usuario:</h6>
-              <input type="text" style="background-color: rgba(255, 255,255, 0.5); color: black; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" name="usuario" #ngUsuario="ngModel" [(ngModel)]="this.reg.usuario
+              <input type="text" style="background-color: rgba(255, 255,255, 0.5); color: black; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" name="usuario"  (ngModel)="this.reg.usuario
               " required  placeholder="Usuario" pattern="^\w+$">
               <span *ngIf="ngUsuario.touched && !ngUsuario.valid">
                 * Usuario no es válido
@@ -40,17 +39,17 @@
               <br><br>
 
               <h6 style="padding-right: 80px;">Contraseña:</h6>
-              <input type="password" style="background-color: rgba(255, 255,255, 0.5); color: black; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" name="password" #ngPassword="ngModel" [(ngModel)]="this.reg.password
+              <input type="password" style="background-color: rgba(255, 255,255, 0.5); color: black; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 40px;" name="password" (ngModel)="this.reg.password
               " required  placeholder="Contraseña" >
               
               <br><br>
 
-              <input type="submit" style="background-color: rgb(22, 0, 163); color: white; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 30px; width: 100px;" value="Registrarse" (click)="guardarRegistro()" [routerLink]="'/login'">
+              <input type="submit" style="background-color: rgb(22, 0, 163); color: white; border-radius: 10px;border: 2px solid rgba(255, 255,255, 0); height: 30px; width: 100px;" value="Registrarse" (click)="guardarRegistro()" >
 
               <br>
               <br>
 
-              <h6><a [href]="['/login']" style="color: white;">Iniciar sesión</a></h6>
+              <h6><a routerLink="/home" style="color: white;">Iniciar sesión</a></h6>
               <br>
             </div>
           </div>

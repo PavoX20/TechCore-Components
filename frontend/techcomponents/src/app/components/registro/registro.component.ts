@@ -4,6 +4,8 @@ import { ComponenteService } from 'src/app/services/componente.service';
 import { Global } from 'src/app/services/global';
 import { sesionValues } from 'src/app/services/sesion';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { NgModel } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
