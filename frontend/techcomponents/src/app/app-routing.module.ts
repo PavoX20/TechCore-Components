@@ -21,6 +21,7 @@ const routes: Routes = [
   {path:'logout',component:LogoutComponent},
   {path:'registro2',component:Registro2Component},
   {path:'**',component:InicioComponent},
+  {path:'',redirectTo:'home',pathMatch:'full'}
 ];
   
 

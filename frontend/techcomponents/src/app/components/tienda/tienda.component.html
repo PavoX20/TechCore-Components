@@ -17,22 +17,18 @@
     <div class="col mt-2 frame1" >
       <div class="icons8Asus1281"></div>
       <div class="asus">Asus</div>
-      <div class="informacion">Ver catálogo</div>
     </div>
     <div class="col mt-2 frame12">
       <div class="icons8Msi961"></div>
       <div class="frame2"><div class="mSI">MSI</div></div>
-      <div class="verCatalogo">Ver catálogo</div>
     </div>
     <div class="col mt-4 frame13">
       <div class="eVGA_logo_black1"></div>
       <div class="frame3"><div class="eVGA">EVGA</div></div>
-      <div class="verCatalogo2">Ver catálogo</div>
     </div>
     <div class="col mt-2 frame14">
       <div class="intel_logo_20062020Png1"></div>
       <div class="frame4"><div class="iNTEL">INTEL</div></div>
-      <div class="verCatalogo3">Ver catálogo</div>
     </div>
   </div>
 </div>
@@ -52,7 +48,7 @@
     <div class="col mt-2 sinProducto clearfix" *ngIf="size===0 && statusError===false">
       NO EXISTE NINGUN PRODUCTO DE ESTA CATEGORIA
     </div>
-      <div class="col mt-2" *ngFor="let producto of techComponent | paginate: {itemsPerPage: 3, currentPage: page}">
+      <div class="col mt-2" *ngFor="let producto of techComponent | paginate: {itemsPerPage: 5, currentPage: page}">
         <div *ngIf="size!=0 && statusError===false">
           <app-tarjeta [item]="producto"></app-tarjeta>
         </div>
