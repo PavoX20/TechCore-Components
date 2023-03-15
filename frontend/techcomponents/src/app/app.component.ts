@@ -15,7 +15,7 @@ import { ComponenteService } from './services/componente.service';
 export class AppComponent implements OnInit {
   public title="TechCore-Components"
   public cantidad:number;
-  public pattern=/^[a-zA-Z]+$/
+  public pattern=/^[a-zA-Z]+[0-9]*$/
   public nombreLoged="";
   public categorias:Categoria[];
   constructor(
