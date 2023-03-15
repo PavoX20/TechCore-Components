@@ -1,0 +1,296 @@
+<div class="container-fluid">
+  <div class="row banner">
+    <div class="col mt-2">
+      <img class="motherboard img-fluid" src="/assets/motherboardInternal4kK71.jpeg">
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col algunasMarcasPopulares">
+      ALGUNAS MARCAS POPULARES
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col mt-2 frame1" >
+      <div class="icons8Asus1281"></div>
+      <div class="asus">Asus</div>
+      <div class="informacion">Ver catálogo</div>
+    </div>
+    <div class="col mt-2 frame12">
+      <div class="icons8Msi961"></div>
+      <div class="frame2"><div class="mSI">MSI</div></div>
+      <div class="verCatalogo">Ver catálogo</div>
+    </div>
+    <div class="col mt-4 frame13">
+      <div class="eVGA_logo_black1"></div>
+      <div class="frame3"><div class="eVGA">EVGA</div></div>
+      <div class="verCatalogo2">Ver catálogo</div>
+    </div>
+    <div class="col mt-2 frame14">
+      <div class="intel_logo_20062020Png1"></div>
+      <div class="frame4"><div class="iNTEL">INTEL</div></div>
+      <div class="verCatalogo3">Ver catálogo</div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col catalogo">
+      CATALOGO
+    </div>
+  </div>
+</div>
+
+<div class="categoria container">
+  <div class="row">
+    <div class="col mt-2 error clearfix" *ngIf="statusError===true">
+      {{error}} D:
+    </div>
+    <div class="col mt-2 sinProducto clearfix" *ngIf="size===0 && statusError===false">
+      NO EXISTE NINGUN PRODUCTO DE ESTA CATEGORIA
+    </div>
+      <div class="col mt-2" *ngFor="let producto of techComponent | paginate: {itemsPerPage: 3, currentPage: page}">
+        <div *ngIf="size!=0 && statusError===false">
+          <app-tarjeta [item]="producto"></app-tarjeta>
+        </div>
+      </div>
+    <pagination-controls class="mt-4 text-center" (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+  </div>
+</div>
+
+
+<div class="container-fluid mt-2 footerBig5">
+  <div class="row">
+    <div class=" col">
+      <div class="landify">TECHCOMPONENTS</div>
+      <div class="icons8Redhat321"></div>
+    </div>
+    <div class="col">
+      <div class="copyright2020LandifyUIKit">Copyright © 2020 Techcomponents.</div>
+      <div class="allRightsReserved">All rights reserved</div>
+    </div>
+    <div class="col">
+      <img src="/assets/path-icon.svg">
+      <img src="/assets/path-icon2.svg">
+      <img src="/assets/path-icon3.svg">
+      <img src="/assets/path-icon4.svg">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="compania">Compañia</div>
+      <div class="listItems">
+        <div class="acercaDe">Acerca de</div>
+        <div class="blog">Blog</div>
+        <div class="contactanos">Contactanos</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="soporte">Soporte</div>
+      <div class="listItems2">
+        <div class="callCenter">Call center</div>
+        <div class="terminosDeServicio">Terminos de servicio</div>
+        <div class="status">Status</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mantenteAlDia">Mantente al dia</div>
+      <div class="emailInputField">
+        <div class="inputFieldBG"></div>
+        <div class="yourEmailAddress">Your email address</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="frame32">
+  <div class="frame22"></div>
+  <div class="agotado">Agotado</div>
+  <div class="icons8SoporteEnLinea961"></div>
+  <div class="mOTHERBOARDASUSSTRIXB550FGAMIN">
+    <ul class="list">
+      <li><div class="textBlock">MOTHERBOARD ASUS STRIX B550F GAMING WIFI BLUETOOTH AM4 4TA</div></li>
+    </ul>
+  </div>
+  <div class="icons8AgregarACarritoDeCompras2"></div>
+  <div class="_100">$10.00</div>
+</div>
+<div class="frame9">
+  <div class="frame23"></div>
+  <div class="reservar">Reservar</div>
+  <div class="icons8SoporteEnLinea9612"></div>
+  <div class="mOTHERBOARDASUSSTRIXB550FGAMIN2">
+    <ul class="list2">
+      <li><div class="textBlock2">MOTHERBOARD ASUS STRIX B550F GAMING WIFI BLUETOOTH AM4 4TA</div></li>
+    </ul>
+  </div>
+  <div class="icons8AgregarACarritoDeCompras3"></div>
+  <div class="_1002">$10.00</div>
+</div>
+<div class="frame10">
+  <div class="frame24"></div>
+  <div class="reservar2">Reservar</div>
+  <div class="icons8SoporteEnLinea9613"></div>
+  <div class="mOTHERBOARDASUSSTRIXB550FGAMIN3">
+    <ul class="list3">
+      <li><div class="textBlock3">MOTHERBOARD ASUS STRIX B550F GAMING WIFI BLUETOOTH AM4 4TA</div></li>
+    </ul>
+  </div>
+  <div class="icons8AgregarACarritoDeCompras4"></div>
+  <div class="_1003">$10.00</div>
+</div>
+<div class="frame11">
+  <div class="frame25"></div>
+  <div class="reservar3">Reservar</div>
+  <div class="icons8SoporteEnLinea9614"></div>
+  <div class="mOTHERBOARDASUSSTRIXB550FGAMIN4">
+    <ul class="list4">
+      <li><div class="textBlock4">MOTHERBOARD ASUS STRIX B550F GAMING WIFI BLUETOOTH AM4 4TA</div></li>
+    </ul>
+  </div>
+  <div class="icons8AgregarACarritoDeCompras5"></div>
+  <div class="_1004">$10.00</div>
+</div>
+<div class="frame122">
+  <div class="frame26"><div class="icons8SoporteEnLinea9615"></div></div>
+  <ng-oferta></ng-oferta>
+  <div class="reservar4">
+    <p class="labelWrapper">
+      <span class="label4">Reservar</span>
+      <span class="label5"></span>
+    </p>
+  </div>
+  <div class="mOTHERBOARDASUSSTRIXB550FGAMIN5">
+    <ul class="list5">
+      <li><div class="textBlock5">MOTHERBOARD ASUS STRIX B550F GAMING WIFI BLUETOOTH AM4 4TA</div></li>
+    </ul>
+  </div>
+  <div class="_1005">
+    <p class="labelWrapper2">
+      <span class="label6">$10.00</span>
+      <span class="label7"></span>
+    </p>
+  </div>
+  <div class="icons8AgregarACarritoDeCompras6"></div>
+  <div class="_999">$9.99</div>
+</div>
+<div class="frame132">
+  <div class="frame27"></div>
+  <div class="reservar5">Reservar</div>
+  <div class="edicionLimitada">edición limitada</div>
+  <div class="icons8SoporteEnLinea9616"></div>
+  <div class="mOTHERBOARDASUSSTRIXB550FGAMIN6">
+    <ul class="list6">
+      <li><div class="textBlock6">MOTHERBOARD ASUS STRIX B550F GAMING WIFI BLUETOOTH AM4 4TA</div></li>
+    </ul>
+  </div>
+  <div class="icons8AgregarACarritoDeCompras7"></div>
+  <div class="_1006">$10.00</div>
+</div>
+<div class="frame8">
+  <div class="frame28"></div>
+  <div class="reservar6">Reservar</div>
+  <div class="icons8SoporteEnLinea9617"></div>
+  <div class="mOTHERBOARDASUSSTRIXB550FGAMIN7">
+    <ul class="list7">
+      <li><div class="textBlock7">MOTHERBOARD ASUS STRIX B550F GAMING WIFI BLUETOOTH AM4 4TA</div></li>
+    </ul>
+  </div>
+  <div class="icons8AgregarACarritoDeCompras8"></div>
+  <div class="_1007">$10.00</div>
+</div>
+<div class="frame7">
+  <div class="frame29"></div>
+  <div class="reservar7">Reservar</div>
+  <div class="icons8SoporteEnLinea9618"></div>
+  <div class="mOTHERBOARDASUSSTRIXB550FGAMIN8">
+    <ul class="list8">
+      <li><div class="textBlock8">MOTHERBOARD ASUS STRIX B550F GAMING WIFI BLUETOOTH AM4 4TA</div></li>
+    </ul>
+  </div>
+  <div class="icons8AgregarACarritoDeCompras9"></div>
+  <div class="_1008">$10.00</div>
+</div>
+<div class="footerBig5">
+  <div class="companyInfo">
+    <div class="logotypeLight">
+      <div class="landify"><img src="assets/landify-icon.svg" alt="" class="icon" /></div>
+      <div class="icons8Redhat321"></div>
+    </div>
+    <div class="copyright">
+      <div class="copyright2020LandifyUIKit">Copyright © 2020 Landify UI Kit.</div>
+      <div class="allRightsReserved">All rights reserved</div>
+    </div>
+    <div class="socialLinks">
+      <ng-social-icons-style-white-socia></ng-social-icons-style-white-socia>
+      <ng-social-icons-style-white-socia2></ng-social-icons-style-white-socia2>
+      <ng-social-icons-style-white-socia3></ng-social-icons-style-white-socia3>
+      <ng-social-icons-style-white-socia4></ng-social-icons-style-white-socia4>
+    </div>
+  </div>
+  <div class="links">
+    <div class="col1">
+      <div class="compania">Compañia</div>
+      <div class="listItems">
+        <div class="acercaDe">Acerca de</div>
+        <div class="blog">Blog</div>
+        <div class="contactanos">Contactanos</div>
+      </div>
+    </div>
+    <div class="col2">
+      <div class="soporte">Soporte</div>
+      <div class="listItems2">
+        <div class="callCenter">Call center</div>
+        <div class="terminosDeServicio">Terminos de servicio</div>
+        <div class="status">Status</div>
+      </div>
+    </div>
+    <div class="col3">
+      <div class="mantenteAlDia">Mantente al dia</div>
+      <div class="emailInputField">
+        <div class="inputFieldBG"></div>
+        <ng-essential-icons-send></ng-essential-icons-send>
+        <div class="yourEmailAddress">Your email address</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="servicios">
+  <div class="frame1">
+    <div class="icons8Asus1281"></div>
+    <div class="asus">Asus</div>
+    <div class="informacion">Información</div>
+  </div>
+  <div class="frame12">
+    <div class="icons8Msi961"></div>
+    <div class="frame2"><div class="mSI">MSI</div></div>
+    <div class="verCatalogo">Ver catálogo</div>
+  </div>
+  <div class="frame13">
+    <div class="eVGA_logo_black1"></div>
+    <div class="frame3"><div class="eVGA">EVGA</div></div>
+    <div class="verCatalogo2">Ver catálogo</div>
+  </div>
+  <div class="frame14">
+    <div class="intel_logo_20062020Png1"></div>
+    <div class="frame4"><div class="iNTEL">INTEL</div></div>
+    <div class="verCatalogo3">Ver catálogo</div>
+  </div>
+</div> 
+<div class="rectangle593"></div>
+<div class="catalogo">Catalogo</div>
+<div class="categoria container">
+  <div class="row">
+    <div class="col-3 mt-2" *ngFor="let producto of componentes">
+      <app-tarjeta [item]="producto"></app-tarjeta>
+    </div>
+  </div>
+</div>
+<div class="rectangle592"></div>
+<div class="algunasMarcasPopulares">ALGUNAS MARCAS POPULARES</div>
+<div class="image2"></div>
+<div class="image3"></div>
+-->

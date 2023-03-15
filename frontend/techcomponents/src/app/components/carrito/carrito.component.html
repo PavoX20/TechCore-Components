@@ -1,0 +1,82 @@
+<!-- <p>elementos en el carrito {{cantidadEnCarrito}}</p>
+
+<br>
+
+<ul>
+    <li *ngFor="let producto of productosEnCarrito">
+      <span class="nombre">{{ producto.nombre }}</span> - <span class="precio">${{ producto.precio }}</span>
+      <button *ngIf="modoEdicion" (click)="eliminarDelCarrito(producto)">Eliminar</button>
+    </li>
+</ul>
+
+
+
+<form>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="radio" name="opcion" [(ngModel)]="opcionSeleccionada" value="opcion1"> Recogida Local
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="radio" name="opcion" [(ngModel)]="opcionSeleccionada" value="opcion2"> Envio
+      </label>
+    </div>
+</form>
+<p>su total es de : {{this.total}}</p>
+
+<button (click)="alternarModoEdicion()">Editar Factura</button>
+<button (click)="vaciarCarrito()">Vaciar carrito</button> -->
+<br>
+
+<div class="container">
+    <div class="grid-container">
+      <div class="grid-item producto">PROCUCTO</div>
+      <div class="grid-item subtotal">SUBPRODUCTO</div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <ul>
+            <li *ngFor="let producto of productosEnCarrito">
+              <span class="nombre">{{ producto.nombre }}</span> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;    <span class="precio">${{ producto.precio }}</span>
+              <button *ngIf="modoEdicion" (click)="eliminarDelCarrito(producto)">Eliminar</button>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item">Subtotal</div>
+      <div class="grid-item subto">${{this.total}}</div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">Envio</div>
+        <div class="grid-item opcion-text">
+            <form class="op">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="opcion" [(ngModel)]="opcionSeleccionada" value="opcion1"> Recogida Local
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="opcion" [(ngModel)]="opcionSeleccionada" value="opcion2"> Envio
+                </label>
+              </div>
+            </form>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">Total</div>
+        <div class="grid-item total-text"> ${{this.total}} (incluye ${{this.total + (this.total*(0.12))}}  impuestos)</div>
+    </div>
+
+    <div class="grid-container botones">
+        <div class="grid-item">
+          <button class="btn-editar" (click)="alternarModoEdicion()">Editar Factura</button>
+          <button class="btn-vaciar" (click)="vaciarCarrito()">Vaciar carrito</button> 
+        </div>
+    </div>
+    
+  </div>
+
+

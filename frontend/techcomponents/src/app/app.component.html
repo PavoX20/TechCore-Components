@@ -1,3 +1,40 @@
-<h1>Benvenue</h1>
-
-<router-outlet></router-outlet>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['/home']">
+            <img src="../assets/kisspng-technology-circle-vector-technology-wind-semicircle-5a8a55a1549f73.5654551715190153293466.png" height="40" alt="TECH COMPONENTS" [routerLink]="['/home']">
+            TECHCORE-COMPONENTS
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" [routerLink]="['/home']" style="margin-right: 50px;">Home</a>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTienda" 
+                    aria-expanded="false" 
+                    style="background: transparent; margin-right: 50px;" [routerLink]="['/componentes']">
+                      Tienda
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuTienda">
+                      <li><a class="dropdown-item" [routerLink]="['/componentes', '6407e3bd706724b394fbe3b1']">Categoria 1</a></li>
+                      <li><a class="dropdown-item" [routerLink]="['/componentes', '640982645693476b531502ac']">Categoria 2</a></li>
+                      <li><a class="dropdown-item" [routerLink]="['/componentes', '640982325693476b531502aa']">Categoria 3</a></li>
+                    </ul>
+                  </div>
+                <a class="nav-item nav-link" [routerLink]="['/registro']">Registro</a>
+                <a class="nav-item nav-link disabled" tabindex="-1" ></a>
+            </div>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-item nav-link" [routerLink]="['/login']">
+                    <img src="../assets/icons8Usuario5011.png" alt="..." height="36">
+                </a>
+                <a class="nav-item nav-link" href="#">
+                    {{this.cantidad}}
+                    <a [routerLink]="['/carrito']"><img src="../assets/icons8AgregarACarritoDeCompras.png" alt="..." height="36" ></a>
+                    
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<section id="content">
+    <router-outlet></router-outlet>
+</section>
