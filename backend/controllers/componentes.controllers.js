@@ -8,6 +8,7 @@ const techComponent = require('../models/techComponent');
 var mongoose = require('mongoose');
 
 
+
 var controller={ 
     getInicio:function(req,res){
         return res.status(201).send(
@@ -77,16 +78,16 @@ var controller={
             return;
         }
         try {
-            const idCategoria = new mongoose.Types.ObjectId(req.params.idCategoria);
-            const techComponents = await techComponent.find({ categoria: idCategoria }).exec();
-            if (!techComponents || techComponent.length === 0) {
-              return res.status(404).send({ message: 'No existen Componentes' });
-            }
-            return res.status(200).send({ techComponents });
-          } catch (err) {
-            console.log(err);
-            return res.status(500).send({ message: 'Error al recuperar los datos' });
-          }          
+          const idCategoria = new mongoose.Types.ObjectId(req.params.idCategoria);
+          const techComponents = await techComponent.find({ categoria: idCategoria }).exec();
+          if (!techComponents || techComponent.length === 0) {
+            return res.status(404).send({ message: 'No existen Componentes' });
+          }
+          return res.status(200).send({ techComponents });
+        } catch (err) {
+          console.log(err);
+          return res.status(500).send({ message: 'Error al recuperar los datos' });
+        }        
           
           
           
@@ -240,7 +241,7 @@ var controller={
                 var fileName = fileSplit[1];
                 var extSplit = fileName.split('\.');
                 var fileExt = extSplit[1];
-                if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
+                if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif' || fileExt == 'webp') {
                     fileNames.push(fileName);
                 } else {
                     fs.unlink(filePath, function(err) {
@@ -291,6 +292,17 @@ var controller={
             console.log(error);
             return res.status(500).send({ message: "Error al buscar el componente" });
           });
+    },
+    getCategorias: async function(req,res){
+      try {
+        const categorias = await CategoriaModel.find().sort('nombre');
+        if (!categorias || !categorias.length) {
+          return res.status(404).send({ message: 'No existen categorias' });
+        }
+        return res.status(200).send(categorias);
+      } catch (err) {
+        return res.status(500).send({ message: 'Error al recuperar los datos' });
+      }
     }
 
 }

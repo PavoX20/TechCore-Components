@@ -6,5 +6,4 @@ var Categoria = Schema({
     nombre: String
 });
 
-module.exports.Categoria = Categoria;
 module.exports.CategoriaModel = mongoose.model('categoria', Categoria);

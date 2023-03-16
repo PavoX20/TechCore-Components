@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import type { OnInit } from '@angular/core';
-import { Componente } from 'src/app/models/componente';
+import { ActivatedRoute, Router } from '@angular/router';
+import { techComponent } from 'src/app/models/techComponent';
 import { ComponenteService } from 'src/app/services/componente.service';
 import { Global } from 'src/app/services/global';
+import { CarritoComponent } from '../carrito/carrito.component';
 
 /* @figmaId 67:293 */
 @Component({
@@ -11,30 +13,73 @@ import { Global } from 'src/app/services/global';
   styleUrls: ['./tienda.component.css'],
 })
 export class TiendaComponent implements OnInit {
-  public componentes:Componente[];
+  public techComponent:techComponent[];
   public url:string;
+  public error:String;
+  public statusError:Boolean
+  public size:number
+  public page!:number
+  
+  public cantidadEnCarrito: number;
   constructor(
-    private _componenteService:ComponenteService
+    private _componenteService:ComponenteService,
+    private carrito: CarritoComponent,
+    private _route: ActivatedRoute,
+    private router: Router
   ) {
     this.url=Global.url;
-    this.componentes=[];
+    this.techComponent=[];
+    this.error="";
+    this.statusError=false;
+    this.size=0;
+    this.cantidadEnCarrito = 0;
    }
   ngOnInit(): void {
-    this.getComponentes()
+    if(this.router.url === '/componentes'){
+      this.getComponentes();
+    this.cantidadEnCarrito = this.carrito.getCantidadEnCarrito();
+    console.log(this.cantidadEnCarrito);
+    }
+    else{
+      this._route.params.subscribe(params=>{
+        let id = params['idCategoria']
+        console.log(id)
+        this.getComponentesId(id)
+      })
+    }
+  }
+
+  getComponentesId(id:String){
+    this._componenteService.getComponente(id).subscribe(
+      response=>{
+        if(response.techComponents){
+          this.statusError = false
+          this.techComponent = response.techComponents
+          this.size = this.techComponent.length
+          console.log(this.techComponent)
+        }
+      },
+      error=>{
+        this.statusError = true
+        this.error = error.error
+      }
+    )
   }
 
   getComponentes(){
     this._componenteService.getComponentes().subscribe(
       response=>{
         if(response.techComponents){
-          this.componentes = response.techComponents
-          console.log(this.componentes)
+          this.statusError = false
+          this.techComponent = response.techComponents
+          this.size = this.techComponent.length
+          console.log(this.techComponent)
         }
       },
       error=>{
-        console.log(<any>error)
+        this.statusError = true
+        this.error = error.error
       }
     )
   }
-
 }

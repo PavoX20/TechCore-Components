@@ -21,27 +21,55 @@
         </div>
         <div class="col-12 col-md-4 order-md-3">
             <!--  central derecha (especificaciones, titulo y botones)-->
-            <h2>{{this.componente.titulo}}</h2>
+            <h2 class="titulo-componente">{{this.componente.titulo}}</h2>
             <ul class="list-unstyled">
                 <p>{{this.componente.detalle}}</p>
             </ul>
-            <ul class="list-unstyled">
-                <p>{{this.componente.precio}}</p>
+            <ul class="list-unstyled" style="text-align: center; margin-top: 10px; font-weight: bold; font-size: 30px;">
+                <p>${{this.componente.precio}}</p>
             </ul>
-            <div class="row">
+            <div class="row" style="text-align: center; margin-top: 50px;">
                 <div class="col-md-6 mb-2">
-                    <button class="btn btn-primary btn-block">Comprar</button>
+                    <button class="btn btn-primary btn-block custom-btn" (click)="agregarCarrito(this.componente)">AÑADIR <br> AL CARRITO</button>
                 </div>
                 <div class="col-md-6 mb-2">
-                    <button class="btn btn-success btn-block">Añadir al carrito</button>
+                    <button class="btn btn-success btn-block custom-btn">COMPRAR <br> AHORA</button>
                 </div>
             </div>
+
+        <div *ngIf="isAdmin()">
+
+            <p *ngIf="confirm==false" class="button-container">
+                <a [routerLink]="['/editar',componente._id]" class="button button-edit">Editar</a>
+                <a (click)="setConfirm(true)" class="button button-delete">Borrar</a>
+            </p>
+            <p *ngIf="confirm==true" class="confirm-container">
+                <span class="confirm">¿Estás seguro de eliminar el componente?</span><br>
+                <a (click)="setConfirm(false)" class="button button-cancel">Cancelar</a>
+                <a (click)="borrarComponente(componente._id)" class="button button-delete">Eliminar definitivamente</a>
+            </p>
+        </div>
+
         </div>
         <div class="col-12 col-md-2 order-md-4">
             <!-- espacio vacio -->
             
         </div>
+
+        
     </div>
+
+    <br>
+    
+
+    <div class="categoria container">
+        <div class="row">
+          <div class="col mt-2" *ngFor="let producto of techComponent | slice:0:3">
+            <app-tarjeta [item]="producto"></app-tarjeta>
+          </div>
+        </div>
+    </div>
+    
 </div>
 
 

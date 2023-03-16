@@ -1,0 +1,51 @@
+<div class="container">
+    <h2>{{titulo}}</h2>
+    <div class="message success" *ngIf="status=='success'">
+        El componente se ha guardado correctamente, puedes verla <a [routerLink]="['/detalle-componente',idGuardado]">aquí</a>.
+    </div>
+    <div class="message failed" *ngIf="status=='failed'">
+        El componente no se ha podido guardar.
+    </div>
+    <form #componenteForm="ngForm" (ngSubmit)="guardarComponente(componenteForm)">
+        <p>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="componente.nombre" required>
+            <span *ngIf="nombre.touched && !nombre.valid">
+                Nombre obligatorio
+            </span>
+        </p>
+        <p>
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" #titulo="ngModel" [(ngModel)]="componente.titulo" required>
+            <span *ngIf="titulo.touched && !titulo.valid">
+                titulo obligatorio
+            </span>
+        </p>
+        <p>
+            <label for="detalle">Detalles</label>
+            <input type="text" name="detalle" #detalle="ngModel" [(ngModel)]="componente.detalle" required>
+        </p>
+        <p>
+            <label for="categoria">Categoria</label>
+            <select name="categoria" [(ngModel)]="componente.idCategoria" (change)="actualizarCategoriaSeleccionada()">
+                <option *ngFor="let categoria of categorias; let i = index" [value]="categoria._id" [selected]="i === 0">{{ categoria.nombre }}</option>
+            </select>
+            <span *ngIf="!categoriaSeleccionada" style="color: red">La selección de una categoría es obligatoria.</span>
+                           
+        </p>
+        <p>
+            <label for="precio">Precio</label>
+            <input type="number" name="precio" #precio="ngModel" [(ngModel)]="componente.precio" required>
+        </p>
+        
+            <label for="imagenes">Imagenes</label>
+            <div *ngFor="let imagen of componente.imagenes; let i = index" style="float: none;">
+                <img src="{{url+'get-imagen/'+imagen}}" style="width: 100px;">
+            </div>
+            <input type="file" name="imagenes" #archivoImagenes placeholder="Seleccionar imagenes" (change)="imagenChangeEvent($event)" multiple>
+            <br>
+            <br>
+        <input type="submit" value="Guardar" [disabled]="!componenteForm.form.valid">
+    </form>
+    
+</div>

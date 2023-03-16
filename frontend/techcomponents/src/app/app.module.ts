@@ -14,7 +14,17 @@ import { TarjetaComponent } from './components/tienda/tarjeta/tarjeta.component'
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponenteService } from './services/componente.service';
-
+import { DetalleComponenteComponent } from './components/detalle-componente/detalle-componente.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
+import { CookieService } from 'ngx-cookie-service';
+import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { EditarcomponentComponent } from './components/editarcomponent/editarcomponent.component';
+import { CreatecomponentComponent } from './components/createcomponent/createcomponent.component';
+import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { Registro2Component } from './registro2/registro2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +37,23 @@ import { ComponenteService } from './services/componente.service';
     OfertaComponent,
     TiendaComponent,
     TarjetaComponent,
+    DetalleComponenteComponent,
+    CarritoComponent,
+    InicioComponent,
+    LoginComponent,
+    EditarcomponentComponent,
+    CreatecomponentComponent,
+    LogoutComponent,
+    Registro2Component
   ],
-  imports: [BrowserModule,
+  imports: [
+    BrowserModule,
     AppRoutingModule,
-    HttpClientModule],
-  providers: [ComponenteService],
+    HttpClientModule,
+    NgxPaginationModule,
+    FormsModule
+  ],
+  providers: [ComponenteService, CookieService, CarritoComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
