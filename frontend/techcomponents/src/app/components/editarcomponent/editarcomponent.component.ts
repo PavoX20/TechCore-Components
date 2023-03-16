@@ -52,16 +52,18 @@ export class EditarcomponentComponent implements OnInit{
     })
   }
   guardarComponente(form: NgForm) {
-    this._componenteService.guardarComponentes(this.componente).subscribe(
+    this._componenteService.updateComponente(this.componente).subscribe(
       response => {
-        if (response.componente) {
+        console.log(response);
+        if (response.techComponentsActualizado) {
           if (this.archivosParaCargar.length > 0) {
             this._cargarService.peticionRequest(Global.url + "guardar-imagenes/" + response.componente._id, [], this.archivosParaCargar, 'imagenes')
               .then((result: any) => {
+                
                 this.componenteGuardar = result.response;
                 this.status = 'success';                
                 this.idGuardado = result.tech._id;
-                console.log(result)
+                
                 form.reset();
 
                 if (this.fileInput) {
@@ -69,7 +71,7 @@ export class EditarcomponentComponent implements OnInit{
                 }
               });
           } else {
-            this.status = 'failed';
+            this.status = 'success';  
           }
         } else {
           this.status = 'failed';
@@ -86,6 +88,7 @@ export class EditarcomponentComponent implements OnInit{
     this._componenteService.getComponenteId(id).subscribe(
       response=>{
         this.componente=response.techComponents;
+        this.idGuardado = this.componente._id;
       },
       error=>{
         console.log(<any>error);
@@ -104,6 +107,7 @@ export class EditarcomponentComponent implements OnInit{
       response=>{
         if(response){
           this.categorias = response;
+          
         }
         else{
         }

@@ -41,6 +41,7 @@ export class CreatecomponentComponent implements OnInit {
   ngOnInit(): void {
 
     this.getCategorias();
+    console.log(this.titulo);
   }
   guardarComponente(form: NgForm) {
     this._componenteService.guardarComponentes(this.componente).subscribe(
